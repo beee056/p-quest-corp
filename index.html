@@ -43,6 +43,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
     <title>PIVOT & QUEST | 教育×コーチングで、人の人生を本質的に変える</title>
     <meta name="description"
         content="総合型選抜専門塾LIGHTHOUSE、教育コンテンツ作成、探究授業・学習支援、Classnavi。コーチングを起点に「良い人生のための自己理解」を実現する教育ブランド。">
@@ -74,10 +75,17 @@
                     },
                     colors: {
                         brand: {
-                            dark: '#0a0a0a',
-                            light: '#fcfcfc',
-                            accent: '#f39c12',
+                            dark: '#121110',
+                            light: '#fcfbf9',
+                            accent: '#e55f3a',
                         }
+                    },
+                    borderRadius: {
+                        '3xl': '24px',
+                        '4xl': '32px',
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 30px rgba(229, 95, 58, 0.05)',
                     }
                 }
             }
@@ -85,8 +93,8 @@
     </script>
     <style>
         body {
-            background-color: #0a0a0a;
-            color: #fcfcfc;
+            background-color: #fafaf7;
+            color: #121110;
             -webkit-font-smoothing: antialiased;
         }
 
@@ -102,9 +110,10 @@
         }
 
         .glass-panel {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(229, 95, 58, 0.08);
+            border-radius: 24px;
         }
 
         /* Noise Grain */
@@ -116,20 +125,20 @@
             height: 100vh;
             pointer-events: none;
             z-index: 50;
-            opacity: 0.03;
+            opacity: 0.02;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
         }
     </style>
 </head>
 
-<body class="selection:bg-brand-accent selection:text-brand-dark">
+<body class="selection:bg-brand-accent selection:text-white">
     <div class="noise"></div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-40 top-0 transition-all duration-300 glass-panel" id="navbar">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold tracking-[0.2em] uppercase">Pivot & Quest</a>
-            <div class="hidden md:flex space-x-8 text-sm tracking-wider">
+    <nav class="fixed top-4 left-4 right-4 max-w-7xl mx-auto z-40 transition-all duration-300 glass-panel shadow-soft" id="navbar">
+        <div class="px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-[0.2em] uppercase text-brand-dark">Pivot & Quest</a>
+            <div class="hidden md:flex space-x-8 text-sm tracking-wider text-gray-600 font-medium">
                 <a href="#vision" class="hover:text-brand-accent transition-colors">VISION</a>
                 <a href="#services" class="hover:text-brand-accent transition-colors">SERVICES</a>
                 <a href="#about" class="hover:text-brand-accent transition-colors">ABOUT</a>
@@ -139,22 +148,22 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="h-screen flex flex-col justify-center items-center px-6 relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-brand-dark z-0"></div>
+    <section class="h-screen flex flex-col justify-center items-center px-6 relative overflow-hidden bg-[#fafaf7]">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#fafaf7] z-0"></div>
         <div class="relative z-10 text-center fade-in-up observer-target">
-            <h1 class="text-5xl md:text-8xl font-black mb-6 tracking-tighter leading-tight">
+            <h1 class="text-5xl md:text-8xl font-black mb-6 tracking-tighter leading-tight text-brand-dark">
                 STRUCTURE <br class="md:hidden">THE CHAOS.<br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-white">FIND THE
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-dark">FIND THE
                     CORE.</span>
             </h1>
             <p
-                class="mt-8 text-gray-400 text-lg md:text-xl tracking-widest max-w-2xl mx-auto font-light leading-relaxed">
+                class="mt-8 text-gray-600 text-lg md:text-xl tracking-widest max-w-2xl mx-auto font-light leading-relaxed">
                 混沌とした課題を構造化し、<br class="md:hidden">あなたの「真の核」を見つけ出す。
             </p>
         </div>
 
         <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3">
                 </path>
             </svg>
@@ -162,13 +171,13 @@
     </section>
 
     <!-- Vision Section -->
-    <section id="vision" class="py-32 px-6 bg-brand-dark relative">
-        <div class="max-w-4xl mx-auto observer-target fade-in-up">
+    <section id="vision" class="py-32 px-6 bg-[#fafaf7] relative">
+        <div class="max-w-4xl mx-auto observer-target fade-in-up bg-white rounded-4xl border border-gray-100 shadow-soft p-12 md:p-20">
             <h2 class="text-brand-accent text-sm font-bold tracking-[0.3em] uppercase mb-4">Vision</h2>
-            <h3 class="text-3xl md:text-5xl font-bold leading-tight mb-12">
+            <h3 class="text-3xl md:text-5xl font-bold leading-tight mb-12 text-brand-dark">
                 すべての人が、<br>自分の可能性を諦めない世界
             </h3>
-            <div class="space-y-8 text-gray-400 leading-loose text-lg font-light">
+            <div class="space-y-8 text-gray-600 leading-loose text-lg font-light">
                 <p>
                     何から手をつけていいか分からない混沌。表面的なノウハウだけでは解決しない根本的な閉塞感。<br>
                     私たちは、その状態を「構造化」し、あなた自身の中に眠る「答え（The Core）」を共に引き出します。
@@ -181,7 +190,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-32 px-6 glass-panel relative">
+    <section id="services" class="py-32 px-6 bg-[#fafaf7] relative">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-brand-accent text-sm font-bold tracking-[0.3em] uppercase mb-16 observer-target fade-in-up">
                 Services</h2>
@@ -189,29 +198,29 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- Service 1 -->
                 <div
-                    class="border border-gray-800 p-8 hover:border-gray-600 transition-colors observer-target fade-in-up group bg-black flex flex-col justify-between">
+                    class="bg-white border border-gray-100 rounded-3xl p-8 shadow-soft hover:shadow-lg hover:border-gray-200 transition-all duration-300 observer-target fade-in-up group flex flex-col justify-between min-h-[420px]">
                     <div>
-                        <div class="text-4xl mb-6 text-gray-700 group-hover:text-brand-accent transition-colors">01
+                        <div class="text-4xl mb-6 text-gray-200 group-hover:text-brand-accent transition-colors font-bold">01
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 tracking-wide">LIGHTHOUSE</h3>
-                        <p class="text-gray-500 text-xs tracking-widest uppercase mb-4">toC / toB</p>
-                        <p class="text-gray-400 leading-relaxed mb-8">
+                        <h3 class="text-2xl font-bold mb-4 tracking-wide text-brand-dark">LIGHTHOUSE</h3>
+                        <p class="text-gray-400 text-xs tracking-widest uppercase mb-4">toC / toB</p>
+                        <p class="text-gray-600 leading-relaxed mb-8 text-sm">
                             総合型選抜専門のコーチング塾。独自メソッド「必然性の一本化」で、生徒一人ひとりのルーツから「なぜ自分がやるのか」を言語化し、難関大合格とその先の良い人生を実現する。学校法人への導入支援も対応。
                         </p>
                     </div>
-                    <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-4 mt-auto">
                         <a href="https://lp.p-quest.com" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center text-sm font-bold tracking-widest uppercase hover:text-brand-accent transition-colors">
+                            class="inline-flex items-center text-sm font-bold tracking-widest uppercase text-brand-dark hover:text-brand-accent transition-colors">
                             View Details
                             <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                             </svg>
                         </a>
-                        <span class="text-gray-700 hidden sm:inline">|</span>
+                        <span class="text-gray-300 hidden sm:inline">|</span>
                         <a href="https://lp.p-quest.com/tools/shindan.html" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center text-xs font-semibold text-brand-accent hover:text-white transition-colors">
-                            無料合格可能性診断を受ける
+                            class="inline-flex items-center text-xs font-bold bg-brand-accent/10 text-brand-accent px-4 py-2 rounded-full hover:bg-brand-accent hover:text-white transition-all duration-200">
+                            合格診断を受ける
                             <svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M9 5l7 7-7 7"></path>
@@ -221,20 +230,20 @@
                 </div>
 
                 <!-- Service 2 -->
-                <div class="border border-gray-800 p-8 hover:border-gray-600 transition-colors observer-target fade-in-up group bg-black flex flex-col justify-between"
+                <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-soft hover:shadow-lg hover:border-gray-200 transition-all duration-300 observer-target fade-in-up group flex flex-col justify-between min-h-[420px]"
                     style="transition-delay: 100ms;">
                     <div>
-                        <div class="text-4xl mb-6 text-gray-700 group-hover:text-brand-accent transition-colors">02
+                        <div class="text-4xl mb-6 text-gray-200 group-hover:text-brand-accent transition-colors font-bold">02
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 tracking-wide">Educational Content & Support</h3>
-                        <p class="text-gray-500 text-xs tracking-widest uppercase mb-4">toC / toB</p>
-                        <p class="text-gray-400 leading-relaxed mb-8">
+                        <h3 class="text-2xl font-bold mb-4 tracking-wide text-brand-dark">Quest Note</h3>
+                        <p class="text-gray-400 text-xs tracking-widest uppercase mb-4">toC / toB</p>
+                        <p class="text-gray-600 leading-relaxed mb-8 text-sm">
                             AI対話型自己探求アプリ「Quest Note」をはじめとする教育コンテンツの作成（toC）と、私立中高等への探究授業・学習支援の運営サポート（toB）。コーチングの知見をスケールさせ、より多くの人に届ける。
                         </p>
                     </div>
-                    <div>
+                    <div class="mt-auto">
                         <a href="https://quest.p-quest.com/" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center text-sm font-bold tracking-widest uppercase hover:text-brand-accent transition-colors">
+                            class="inline-flex items-center text-sm font-bold tracking-widest uppercase text-brand-dark hover:text-brand-accent transition-colors">
                             View Details
                             <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -245,20 +254,20 @@
                 </div>
 
                 <!-- Service 3 -->
-                <div class="border border-gray-800 p-8 hover:border-gray-600 transition-colors observer-target fade-in-up group bg-black flex flex-col justify-between"
+                <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-soft hover:shadow-lg hover:border-gray-200 transition-all duration-300 observer-target fade-in-up group flex flex-col justify-between min-h-[420px]"
                     style="transition-delay: 200ms;">
                     <div>
-                        <div class="text-4xl mb-6 text-gray-700 group-hover:text-brand-accent transition-colors">03
+                        <div class="text-4xl mb-6 text-gray-200 group-hover:text-brand-accent transition-colors font-bold">03
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 tracking-wide">Classnavi</h3>
-                        <p class="text-gray-500 text-xs tracking-widest uppercase mb-4">toB / toC</p>
-                        <p class="text-gray-400 leading-relaxed mb-8">
+                        <h3 class="text-2xl font-bold mb-4 tracking-wide text-brand-dark">Classnavi</h3>
+                        <p class="text-gray-400 text-xs tracking-widest uppercase mb-4">toB / toC</p>
+                        <p class="text-gray-600 leading-relaxed mb-8 text-sm">
                             学校内併設型の学習支援サービス向け 統合管理システム。学習記録、出欠、指導報告書の一元管理により、学校・生徒・チューター間の連携を構造化・スマート化します。
                         </p>
                     </div>
-                    <div>
+                    <div class="mt-auto">
                         <a href="https://lp.classnavi.p-quest.com" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center text-sm font-bold tracking-widest uppercase hover:text-brand-accent transition-colors">
+                            class="inline-flex items-center text-sm font-bold tracking-widest uppercase text-brand-dark hover:text-brand-accent transition-colors">
                             View Details
                             <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -273,22 +282,22 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-32 px-6 bg-brand-dark">
-        <div class="max-w-4xl mx-auto observer-target fade-in-up">
+    <section id="about" class="py-32 px-6 bg-[#fafaf7]">
+        <div class="max-w-4xl mx-auto observer-target fade-in-up bg-white rounded-4xl border border-gray-100 shadow-soft p-12 md:p-20">
             <h2 class="text-brand-accent text-sm font-bold tracking-[0.3em] uppercase mb-12">About</h2>
             <div class="flex flex-col md:flex-row gap-12 items-start">
                 <div class="w-32 h-32 md:w-40 md:h-40 flex-shrink-0 relative">
                     <img src="./profile.jpg" alt="Yuto Tanabe"
-                        class="w-full h-full object-cover rounded-full border-2 border-brand-accent/30 shadow-2xl">
+                        class="w-full h-full object-cover rounded-full border-4 border-[#fafaf7] shadow-xl">
                 </div>
                 <div>
-                    <h3 class="text-2xl font-bold mb-2">Yuto Tanabe</h3>
-                    <p class="text-gray-500 mb-6 tracking-widest text-sm uppercase">Founder / Representative</p>
-                    <p class="text-gray-400 leading-relaxed font-light">
+                    <h3 class="text-2xl font-bold mb-2 text-brand-dark">Yuto Tanabe</h3>
+                    <p class="text-gray-400 mb-6 tracking-widest text-xs uppercase font-semibold">Founder / Representative</p>
+                    <p class="text-gray-600 leading-relaxed font-light text-sm md:text-base">
                         論理と思考の整理を通じ、複雑に絡み合った課題を構造化するプロフェッショナル。<br><br>
                         「人は誰でも、自分の中に答えを持っている」という信念のもと、ビジネスと自己実現の壁に直面する多くのステークホルダーに伴走。表面的なスキルやテンプレートではなく、その人が持つ真の核（The
                         Core）を引き出し、言語化・体系化することで、唯一無二の価値創出を支援している。<br><br>
-                        また、公式note<a href="https://note.com/veintiuno" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:underline">「ちーず｜note」</a>では、教育や自己探究、人生の構造化に関する知見を発信している。
+                        また、公式note<a href="https://note.com/veintiuno" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:underline font-medium">「ちーず｜note」</a>では、教育や自己探究、人生の構造化に関する知見を発信している。
                     </p>
                 </div>
             </div>
@@ -296,35 +305,35 @@
     </section>
 
     <!-- Company Section -->
-    <section id="company" class="py-32 px-6 glass-panel relative">
-        <div class="max-w-4xl mx-auto observer-target fade-in-up">
+    <section id="company" class="py-32 px-6 bg-[#fafaf7] relative">
+        <div class="max-w-4xl mx-auto observer-target fade-in-up bg-white rounded-4xl border border-gray-100 shadow-soft p-12 md:p-20">
             <h2 class="text-brand-accent text-sm font-bold tracking-[0.3em] uppercase mb-12">Company Profile</h2>
 
-            <div class="border-t border-gray-800">
-                <dl class="divide-y divide-gray-800 text-sm md:text-base">
+            <div class="border-t border-gray-100">
+                <dl class="divide-y divide-gray-100 text-sm md:text-base">
                     <div class="py-6 flex flex-col md:flex-row md:items-start">
                         <dt
                             class="w-full md:w-1/3 font-bold text-gray-400 mb-2 md:mb-0 uppercase tracking-widest text-xs mt-1">
                             屋号 / 社名</dt>
-                        <dd class="w-full md:w-2/3 text-gray-200">PIVOT & QUEST</dd>
+                        <dd class="w-full md:w-2/3 text-gray-800">PIVOT & QUEST</dd>
                     </div>
                     <div class="py-6 flex flex-col md:flex-row md:items-start">
                         <dt
                             class="w-full md:w-1/3 font-bold text-gray-400 mb-2 md:mb-0 uppercase tracking-widest text-xs mt-1">
                             代表</dt>
-                        <dd class="w-full md:w-2/3 text-gray-200">田邊 勇人 (Yuto Tanabe)</dd>
+                        <dd class="w-full md:w-2/3 text-gray-800">田邊 勇人 (Yuto Tanabe)</dd>
                     </div>
                     <div class="py-6 flex flex-col md:flex-row md:items-start">
                         <dt
                             class="w-full md:w-1/3 font-bold text-gray-400 mb-2 md:mb-0 uppercase tracking-widest text-xs mt-1">
                             所在地</dt>
-                        <dd class="w-full md:w-2/3 text-gray-200">茨城県つくば市谷田部1144-392</dd>
+                        <dd class="w-full md:w-2/3 text-gray-800">茨城県つくば市谷田部1144-392</dd>
                     </div>
                     <div class="py-6 flex flex-col md:flex-row md:items-start">
                         <dt
                             class="w-full md:w-1/3 font-bold text-gray-400 mb-2 md:mb-0 uppercase tracking-widest text-xs mt-1">
                             事業内容</dt>
-                        <dd class="w-full md:w-2/3 text-gray-200 leading-relaxed">
+                        <dd class="w-full md:w-2/3 text-gray-800 leading-relaxed">
                             <ul class="list-disc list-inside space-y-2">
                                 <li>総合型選抜専門塾「LIGHTHOUSE」の運営</li>
                                 <li>教育コンテンツの作成</li>
@@ -338,7 +347,7 @@
                         <dt
                             class="w-full md:w-1/3 font-bold text-gray-400 mb-2 md:mb-0 uppercase tracking-widest text-xs mt-1">
                             お問い合わせ</dt>
-                        <dd class="w-full md:w-2/3 text-gray-200">
+                        <dd class="w-full md:w-2/3 text-gray-800 font-semibold">
                             <a href="https://forms.gle/o3NBaoy7CoT4KCFY7" target="_blank"
                                 class="text-brand-accent hover:underline">お問い合わせフォーム</a> / <a href="https://lin.ee/brTdUGs" target="_blank" class="text-brand-accent hover:underline">公式LINE</a>
                         </dd>
@@ -349,14 +358,14 @@
     </section>
 
     <!-- Footer -->
-    <footer class="border-t border-gray-900 py-12 px-6 text-center text-sm text-gray-600">
-        <div class="flex justify-center space-x-6 mb-8 uppercase tracking-widest text-xs">
-            <a href="./privacy-policy.html" class="hover:text-gray-300 transition-colors">Privacy Policy</a>
-            <a href="./terms.html" class="hover:text-gray-300 transition-colors">Terms of Service</a>
-            <a href="https://note.com/veintiuno" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300 transition-colors">公式note</a>
-            <a href="https://lin.ee/brTdUGs" target="_blank" class="hover:text-gray-300 transition-colors">公式LINE</a>
+    <footer class="border-t border-gray-100 py-12 px-6 text-center text-sm text-gray-500 bg-white">
+        <div class="flex justify-center space-x-6 mb-8 uppercase tracking-widest text-xs font-semibold">
+            <a href="./privacy-policy.html" class="hover:text-brand-accent transition-colors">Privacy Policy</a>
+            <a href="./terms.html" class="hover:text-brand-accent transition-colors">Terms of Service</a>
+            <a href="https://note.com/veintiuno" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent transition-colors">公式note</a>
+            <a href="https://lin.ee/brTdUGs" target="_blank" class="hover:text-brand-accent transition-colors">公式LINE</a>
             <a href="https://forms.gle/o3NBaoy7CoT4KCFY7" target="_blank"
-                class="hover:text-gray-300 transition-colors">Contact</a>
+                class="hover:text-brand-accent transition-colors">Contact</a>
         </div>
         <p>&copy; 2026 PIVOT & QUEST. All Rights Reserved.</p>
     </footer>
