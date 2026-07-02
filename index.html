@@ -20,6 +20,8 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "PIVOT & QUEST",
+      "legalName": "株式会社PIVOT＆QUEST",
+      "email": "info@p-quest.com",
       "url": "https://p-quest.com/",
       "logo": "https://p-quest.com/profile.jpg",
       "description": "課題の構造化（PIVOT）と解決策の実装（QUEST）を通じて、経営・教育・人生のステージを引き上げる伴走型エージェンシー。総合型選抜対策塾LIGHTHOUSEや教育統合管理システムClassnaviを運営。",
@@ -144,6 +146,21 @@
                 <a href="#about" class="hover:text-brand-accent transition-colors">ABOUT</a>
                 <a href="#company" class="hover:text-brand-accent transition-colors">COMPANY</a>
             </div>
+            <button id="menu-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false"
+                class="md:hidden p-2 -mr-2 text-brand-dark hover:text-brand-accent transition-colors">
+                <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 flex flex-col space-y-4 text-sm tracking-wider text-gray-600 font-medium">
+            <a href="#vision" class="hover:text-brand-accent transition-colors">VISION</a>
+            <a href="#services" class="hover:text-brand-accent transition-colors">SERVICES</a>
+            <a href="#about" class="hover:text-brand-accent transition-colors">ABOUT</a>
+            <a href="#company" class="hover:text-brand-accent transition-colors">COMPANY</a>
         </div>
     </nav>
 
@@ -192,23 +209,44 @@
     <!-- Services Section -->
     <section id="services" class="py-32 px-6 bg-[#fafaf7] relative">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-brand-accent text-sm font-bold tracking-[0.3em] uppercase mb-16 observer-target fade-in-up">
-                Services</h2>
+            <div class="observer-target fade-in-up mb-16 max-w-3xl">
+                <h2 class="text-brand-accent text-sm font-bold tracking-[0.3em] uppercase mb-4">Services</h2>
+                <h3 class="text-3xl md:text-5xl font-bold leading-tight text-brand-dark mb-8">
+                    すべては、<br class="md:hidden">コーチングから始まる。
+                </h3>
+                <p class="text-gray-600 leading-loose text-lg font-light">
+                    私たちの事業は、独立した3つのサービスの寄せ集めではありません。核にあるのは「良い人生のための自己理解」を引き出す教育×コーチング。その核が実践の現場で磨かれ、プロダクトとしてより多くの人へ広がっていく——同心円の構造です。
+                </p>
+            </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div
-                    class="bg-white border border-gray-100 rounded-3xl p-8 shadow-soft hover:shadow-lg hover:border-gray-200 transition-all duration-300 observer-target fade-in-up group flex flex-col justify-between min-h-[420px]">
-                    <div>
-                        <div class="text-4xl mb-6 text-gray-200 group-hover:text-brand-accent transition-colors font-bold">01
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 tracking-wide text-brand-dark">LIGHTHOUSE</h3>
-                        <p class="text-gray-400 text-xs tracking-widest uppercase mb-4">toC / toB</p>
-                        <p class="text-gray-600 leading-relaxed mb-8 text-sm">
-                            総合型選抜専門のコーチング塾。独自メソッド「必然性の一本化」で、生徒一人ひとりのルーツから「なぜ自分がやるのか」を言語化し、難関大合格とその先の良い人生を実現する。学校法人への導入支援も対応。
+            <!-- Concentric structure diagram -->
+            <div class="observer-target fade-in-up flex justify-center mb-20">
+                <svg viewBox="0 0 480 480" class="w-full max-w-xl" role="img"
+                    aria-label="事業構造の同心円図。核に教育×コーチング、その周りに実践の現場であるLIGHTHOUSE、外側に知見の展開であるQuest NoteとClassnavi。">
+                    <circle cx="240" cy="240" r="228" fill="rgba(229, 95, 58, 0.04)" stroke="rgba(229, 95, 58, 0.15)" stroke-width="1.5" stroke-dasharray="4 6" />
+                    <circle cx="240" cy="240" r="158" fill="rgba(229, 95, 58, 0.07)" stroke="rgba(229, 95, 58, 0.25)" stroke-width="1.5" />
+                    <circle cx="240" cy="240" r="88" fill="#e55f3a" />
+                    <text x="240" y="234" text-anchor="middle" fill="#ffffff" font-size="19" font-weight="700" font-family="Inter, 'Noto Sans JP', sans-serif">教育×コーチング</text>
+                    <text x="240" y="258" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="11" letter-spacing="2" font-family="Inter, 'Noto Sans JP', sans-serif">THE CORE</text>
+                    <text x="240" y="112" text-anchor="middle" fill="#121110" font-size="17" font-weight="700" font-family="Inter, 'Noto Sans JP', sans-serif">LIGHTHOUSE</text>
+                    <text x="240" y="132" text-anchor="middle" fill="#6b7280" font-size="11" font-family="Inter, 'Noto Sans JP', sans-serif">実践の現場</text>
+                    <text x="240" y="42" text-anchor="middle" fill="#121110" font-size="15" font-weight="700" font-family="Inter, 'Noto Sans JP', sans-serif">Quest Note / Classnavi</text>
+                    <text x="240" y="61" text-anchor="middle" fill="#6b7280" font-size="11" font-family="Inter, 'Noto Sans JP', sans-serif">知見の展開</text>
+                </svg>
+            </div>
+
+            <!-- Core service: LIGHTHOUSE -->
+            <div class="bg-white border border-gray-100 rounded-4xl p-8 md:p-12 shadow-soft hover:shadow-lg hover:border-gray-200 transition-all duration-300 observer-target fade-in-up group mb-8">
+                <div class="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-12">
+                    <div class="flex-1">
+                        <p class="text-brand-accent text-xs font-bold tracking-[0.3em] uppercase mb-4">Core ── 実践の現場</p>
+                        <h3 class="text-3xl font-bold mb-3 tracking-wide text-brand-dark">LIGHTHOUSE</h3>
+                        <p class="text-gray-400 text-xs tracking-widest uppercase mb-6">総合型選抜専門コーチング塾 / toC・toB</p>
+                        <p class="text-gray-600 leading-relaxed text-sm md:text-base">
+                            コーチングの核をもっとも濃く体現する旗艦事業。独自メソッド「必然性の一本化」で、生徒一人ひとりのルーツから「なぜ自分がやるのか」を言語化し、難関大合格とその先の良い人生を実現する。学校法人への導入支援も対応。
                         </p>
                     </div>
-                    <div class="flex flex-col sm:flex-row sm:items-center gap-4 mt-auto">
+                    <div class="flex flex-col sm:flex-row lg:flex-col sm:items-center lg:items-start gap-4 flex-shrink-0">
                         <a href="https://lp.p-quest.com" target="_blank" rel="noopener noreferrer"
                             class="inline-flex items-center text-sm font-bold tracking-widest uppercase text-brand-dark hover:text-brand-accent transition-colors">
                             View Details
@@ -217,7 +255,6 @@
                                     d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                             </svg>
                         </a>
-                        <span class="text-gray-300 hidden sm:inline">|</span>
                         <a href="https://lp.p-quest.com/tools/shindan.html" target="_blank" rel="noopener noreferrer"
                             class="inline-flex items-center text-xs font-bold bg-brand-accent/10 text-brand-accent px-4 py-2 rounded-full hover:bg-brand-accent hover:text-white transition-all duration-200">
                             合格診断を受ける
@@ -228,17 +265,18 @@
                         </a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Service 2 -->
-                <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-soft hover:shadow-lg hover:border-gray-200 transition-all duration-300 observer-target fade-in-up group flex flex-col justify-between min-h-[420px]"
+            <!-- Derived services -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-soft hover:shadow-lg hover:border-gray-200 transition-all duration-300 observer-target fade-in-up group flex flex-col justify-between"
                     style="transition-delay: 100ms;">
                     <div>
-                        <div class="text-4xl mb-6 text-gray-200 group-hover:text-brand-accent transition-colors font-bold">02
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 tracking-wide text-brand-dark">Quest Note</h3>
-                        <p class="text-gray-400 text-xs tracking-widest uppercase mb-4">toC / toB</p>
+                        <p class="text-brand-accent text-xs font-bold tracking-[0.3em] uppercase mb-4">Derived ── 知見の展開</p>
+                        <h3 class="text-2xl font-bold mb-3 tracking-wide text-brand-dark">Quest Note</h3>
+                        <p class="text-gray-400 text-xs tracking-widest uppercase mb-4">AI対話型自己探求アプリ / toC・toB</p>
                         <p class="text-gray-600 leading-relaxed mb-8 text-sm">
-                            AI対話型自己探求アプリ「Quest Note」をはじめとする教育コンテンツの作成（toC）と、私立中高等への探究授業・学習支援の運営サポート（toB）。コーチングの知見をスケールさせ、より多くの人に届ける。
+                            コーチングの現場で磨かれた「問い」をアプリにした、AI対話型の自己探求ツール。採点や評価ではなく、対話を通じて自分の言葉と核を見つけることを支援する。私立中高への探究授業・学習支援の運営サポート（toB）にも展開。
                         </p>
                     </div>
                     <div class="mt-auto">
@@ -253,16 +291,14 @@
                     </div>
                 </div>
 
-                <!-- Service 3 -->
-                <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-soft hover:shadow-lg hover:border-gray-200 transition-all duration-300 observer-target fade-in-up group flex flex-col justify-between min-h-[420px]"
+                <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-soft hover:shadow-lg hover:border-gray-200 transition-all duration-300 observer-target fade-in-up group flex flex-col justify-between"
                     style="transition-delay: 200ms;">
                     <div>
-                        <div class="text-4xl mb-6 text-gray-200 group-hover:text-brand-accent transition-colors font-bold">03
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 tracking-wide text-brand-dark">Classnavi</h3>
-                        <p class="text-gray-400 text-xs tracking-widest uppercase mb-4">toB / toC</p>
+                        <p class="text-brand-accent text-xs font-bold tracking-[0.3em] uppercase mb-4">Derived ── 知見の展開</p>
+                        <h3 class="text-2xl font-bold mb-3 tracking-wide text-brand-dark">Classnavi</h3>
+                        <p class="text-gray-400 text-xs tracking-widest uppercase mb-4">学習支援 統合管理システム / toB・toC</p>
                         <p class="text-gray-600 leading-relaxed mb-8 text-sm">
-                            学校内併設型の学習支援サービス向け 統合管理システム。学習記録、出欠、指導報告書の一元管理により、学校・生徒・チューター間の連携を構造化・スマート化します。
+                            学習支援運営の知見から生まれた、学校内併設型の学習支援サービス向け統合管理システム。学習記録、出欠、指導報告書の一元管理により、学校・生徒・チューター間の連携を構造化・スマート化する。
                         </p>
                     </div>
                     <div class="mt-auto">
@@ -314,13 +350,13 @@
                     <div class="py-6 flex flex-col md:flex-row md:items-start">
                         <dt
                             class="w-full md:w-1/3 font-bold text-gray-400 mb-2 md:mb-0 uppercase tracking-widest text-xs mt-1">
-                            屋号 / 社名</dt>
-                        <dd class="w-full md:w-2/3 text-gray-800">PIVOT & QUEST</dd>
+                            社名</dt>
+                        <dd class="w-full md:w-2/3 text-gray-800">株式会社PIVOT＆QUEST（PIVOT & QUEST Inc.）</dd>
                     </div>
                     <div class="py-6 flex flex-col md:flex-row md:items-start">
                         <dt
                             class="w-full md:w-1/3 font-bold text-gray-400 mb-2 md:mb-0 uppercase tracking-widest text-xs mt-1">
-                            代表</dt>
+                            代表取締役</dt>
                         <dd class="w-full md:w-2/3 text-gray-800">田邊 勇人 (Yuto Tanabe)</dd>
                     </div>
                     <div class="py-6 flex flex-col md:flex-row md:items-start">
@@ -348,8 +384,8 @@
                             class="w-full md:w-1/3 font-bold text-gray-400 mb-2 md:mb-0 uppercase tracking-widest text-xs mt-1">
                             お問い合わせ</dt>
                         <dd class="w-full md:w-2/3 text-gray-800 font-semibold">
-                            <a href="https://forms.gle/o3NBaoy7CoT4KCFY7" target="_blank"
-                                class="text-brand-accent hover:underline">お問い合わせフォーム</a> / <a href="https://lin.ee/brTdUGs" target="_blank" class="text-brand-accent hover:underline">公式LINE</a>
+                            <a href="https://forms.gle/o3NBaoy7CoT4KCFY7" target="_blank" rel="noopener noreferrer"
+                                class="text-brand-accent hover:underline">お問い合わせフォーム</a> / <a href="https://lin.ee/brTdUGs" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:underline">公式LINE</a> / <a href="mailto:info@p-quest.com" class="text-brand-accent hover:underline">info@p-quest.com</a>
                         </dd>
                     </div>
                 </dl>
@@ -367,7 +403,7 @@
             <a href="https://forms.gle/o3NBaoy7CoT4KCFY7" target="_blank"
                 class="hover:text-brand-accent transition-colors">Contact</a>
         </div>
-        <p>&copy; 2026 PIVOT & QUEST. All Rights Reserved.</p>
+        <p>&copy; 2026 PIVOT & QUEST Inc. All Rights Reserved.</p>
     </footer>
 
     <!-- Intersection Observer Script -->
@@ -390,6 +426,22 @@
             setTimeout(() => {
                 document.querySelectorAll('.fade-in-up')[0].classList.add('visible');
             }, 100);
+
+            // Mobile menu toggle (再クリック/リンク選択で閉じる)
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('menu-icon-open');
+            const iconClose = document.getElementById('menu-icon-close');
+            const setMenu = (open) => {
+                mobileMenu.classList.toggle('hidden', !open);
+                iconOpen.classList.toggle('hidden', open);
+                iconClose.classList.toggle('hidden', !open);
+                menuToggle.setAttribute('aria-expanded', String(open));
+            };
+            menuToggle.addEventListener('click', () => {
+                setMenu(mobileMenu.classList.contains('hidden'));
+            });
+            mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
         });
     </script>
 </body>
