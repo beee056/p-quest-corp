@@ -307,12 +307,19 @@
             padding-top: 0.4em;
         }
 
+        /* 左カラム: テキスト上・ペンギン左下(名刺と同じ構図) */
         .hero-side {
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
-            gap: 28px;
+            justify-content: space-between;
             max-width: 400px;
+        }
+
+        .hero-copy {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            padding-top: 10px;
         }
 
         .hero-eyebrow {
@@ -345,10 +352,10 @@
 
         /* ロゴマーク(ペンギン): 縮小のみ・拡大禁止(原寸 208x453) */
         .hero-mark {
-            height: clamp(130px, 20vh, 200px);
+            height: clamp(200px, 30vh, 300px);
             width: auto;
             align-self: flex-start;
-            margin-top: 20px;
+            margin-top: 48px;
         }
 
         .footer-mark {
@@ -490,70 +497,67 @@
         }
 
         /* ---------- 一、理念 ---------- */
-        .phi-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 48px;
-        }
-
-        @media (min-width: 900px) {
-            .phi-grid {
-                grid-template-columns: 5fr 7fr;
-                gap: 96px;
-            }
+        .phi-body {
+            max-width: 720px;
         }
 
         .phi-body p {
             font-size: 15px;
+            line-height: 2.3;
             color: var(--ink);
-            margin-bottom: 2em;
         }
 
-        .phi-quote {
-            border-left: 2px solid var(--shu);
-            padding: 6px 0 6px 28px;
-            margin-top: 40px;
+        /* ---------- 二、構造(縦の連鎖) ---------- */
+        .structure-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 56px;
         }
 
-        .phi-quote p {
-            font-family: 'Shippori Mincho', serif;
-            font-size: 17px;
-            line-height: 2.2;
-            margin: 0;
+        @media (min-width: 900px) {
+            .structure-grid {
+                grid-template-columns: 5fr 6fr;
+                gap: 96px;
+                align-items: center;
+            }
+
+            .structure-grid .chain {
+                order: 2;
+            }
+
+            .structure-grid .chain-note {
+                order: 1;
+            }
         }
 
-        /* ---------- 二、構造 ---------- */
         .chain {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            flex-wrap: nowrap;
-            gap: 0;
-            margin: 80px 0 64px;
         }
 
         .chain-word {
             font-family: 'Shippori Mincho', serif;
             font-weight: 600;
-            font-size: clamp(22px, 3.4vw, 38px);
-            letter-spacing: 0.12em;
+            font-size: clamp(24px, 2.6vw, 34px);
+            letter-spacing: 0.14em;
             white-space: nowrap;
             position: relative;
-            padding: 10px 4px;
+            padding: 8px 12px;
         }
 
         .chain-dash {
-            flex: 0 1 72px;
-            min-width: 18px;
-            height: 1px;
+            width: 1px;
+            height: 36px;
             background: var(--rule-strong);
-            margin: 0 10px;
+            margin: 8px 0;
         }
 
         .chain-word.goal {
             color: var(--paper);
             background: var(--ink);
-            padding: 10px 18px;
+            padding: 12px 24px;
+            margin-top: 4px;
         }
 
         /* 問い の朱円(赤ペン) */
@@ -585,34 +589,13 @@
             stroke-dashoffset: 0;
         }
 
-        @media (max-width: 860px) {
-            .chain {
-                flex-direction: column;
-                margin: 56px 0 48px;
-            }
-
-            .chain-dash {
-                flex: none;
-                width: 1px;
-                min-width: 0;
-                height: 30px;
-                margin: 6px 0;
-            }
-        }
-
         .chain-note {
-            max-width: 640px;
-            margin: 0 auto;
-            text-align: center;
+            max-width: 520px;
             font-size: 15px;
             color: var(--gray);
+            line-height: 2.3;
         }
 
-        @media (max-width: 767px) {
-            .chain-note {
-                text-align: left;
-            }
-        }
 
         /* ---------- 三、事業展開(目次型) ---------- */
         .biz-row {
@@ -1141,16 +1124,18 @@
     <header class="hero">
         <div class="wrap hero-grid">
             <div class="hero-side">
-                <p class="hero-eyebrow en fade">Pivot & Quest Inc.</p>
-                <p class="hero-lead fade">
-                    株式会社PIVOT&QUESTは、教育を起点に、問いを言葉にし、学びを進路や社会との接点につなげる会社です。
-                </p>
-                <a href="#philosophy" class="hero-cta fade">
-                    私たちの考え
-                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m0 0l6-6m-6 6l-6-6" />
-                    </svg>
-                </a>
+                <div class="hero-copy">
+                    <p class="hero-eyebrow en fade">Pivot & Quest Inc.</p>
+                    <p class="hero-lead fade">
+                        株式会社PIVOT&QUESTは、教育を起点に、問いを言葉にし、学びを進路や社会との接点につなげる会社です。
+                    </p>
+                    <a href="#philosophy" class="hero-cta fade">
+                        私たちの考え
+                        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m0 0l6-6m-6 6l-6-6" />
+                        </svg>
+                    </a>
+                </div>
                 <img src="./logo.png" alt="" class="hero-mark stamp" aria-hidden="true">
             </div>
             <div class="hero-headline">
@@ -1174,23 +1159,11 @@
                         <h2 class="sec-title">中心にあるのは、教育。</h2>
                     </div>
                 </div>
-                <div class="phi-grid">
-                    <p class="reveal" style="font-family:'Shippori Mincho',serif; font-size:17px; line-height:2.4; letter-spacing:0.04em;">
-                        すべての事業を、<br>同列には並べません。
+                <div class="phi-body reveal">
+                    <p>
+                        私たちは、探究、自己分析、進路支援、文章表現、学校支援、業務改善、制作、システム開発まで横断して支援しています。その土台にあるのは、総合型選抜対策専門塾
+                        Lighthouse の運営、探究授業、進路指導という教育現場の実務です。現場で見えてきた課題を、必要に応じて制作、仕組み化、システム開発へと展開しています。
                     </p>
-                    <div class="phi-body reveal">
-                        <p>
-                            私たちは、探究、自己分析、進路支援、文章表現、学校支援、業務改善、制作、システム開発まで横断して支援しています。その土台にあるのは、総合型選抜対策専門塾
-                            Lighthouse の運営、探究授業、進路指導という教育現場の実務です。現場で見えてきた課題を、必要に応じて制作、仕組み化、システム開発へと展開しています。
-                        </p>
-                        <div class="phi-quote">
-                            <p>
-                                AIやシステムは、目的ではありません。<br>
-                                人が考え、学び、対話し、判断し、<br>
-                                実践する時間を増やすための手段です。
-                            </p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -1206,30 +1179,32 @@
                     </div>
                 </div>
 
-                <div class="chain reveal" role="list" aria-label="事業の構造: 想いから未来まで">
-                    <span class="chain-word" role="listitem">想い</span>
-                    <span class="chain-dash" aria-hidden="true"></span>
-                    <span class="chain-word" role="listitem">言葉</span>
-                    <span class="chain-dash" aria-hidden="true"></span>
-                    <span class="chain-word core" role="listitem">
-                        問い
-                        <svg class="core-circle" viewBox="0 0 110 72" aria-hidden="true">
-                            <path d="M55 6 C 88 4, 106 16, 104 36 C 102 58, 78 68, 52 66 C 24 64, 4 54, 6 34 C 8 14, 32 5, 62 8" />
-                        </svg>
-                    </span>
-                    <span class="chain-dash" aria-hidden="true"></span>
-                    <span class="chain-word" role="listitem">学び</span>
-                    <span class="chain-dash" aria-hidden="true"></span>
-                    <span class="chain-word" role="listitem">選択</span>
-                    <span class="chain-dash" aria-hidden="true"></span>
-                    <span class="chain-word" role="listitem">行動</span>
-                    <span class="chain-dash" aria-hidden="true"></span>
-                    <span class="chain-word goal" role="listitem">未来</span>
-                </div>
+                <div class="structure-grid">
+                    <div class="chain reveal" role="list" aria-label="事業の構造: 想いから未来まで">
+                        <span class="chain-word" role="listitem">想い</span>
+                        <span class="chain-dash" aria-hidden="true"></span>
+                        <span class="chain-word" role="listitem">言葉</span>
+                        <span class="chain-dash" aria-hidden="true"></span>
+                        <span class="chain-word core" role="listitem">
+                            問い
+                            <svg class="core-circle" viewBox="0 0 110 72" aria-hidden="true">
+                                <path d="M55 6 C 88 4, 106 16, 104 36 C 102 58, 78 68, 52 66 C 24 64, 4 54, 6 34 C 8 14, 32 5, 62 8" />
+                            </svg>
+                        </span>
+                        <span class="chain-dash" aria-hidden="true"></span>
+                        <span class="chain-word" role="listitem">学び</span>
+                        <span class="chain-dash" aria-hidden="true"></span>
+                        <span class="chain-word" role="listitem">選択</span>
+                        <span class="chain-dash" aria-hidden="true"></span>
+                        <span class="chain-word" role="listitem">行動</span>
+                        <span class="chain-dash" aria-hidden="true"></span>
+                        <span class="chain-word goal" role="listitem">未来</span>
+                    </div>
 
-                <p class="chain-note reveal">
-                    総合型選抜、探究授業、学校支援、制作、業務改善、システム開発。一見別々の事業に見えて、共通しているのは、問いを起点に言葉を整え、学びや社会との接点を見つけ、選択と行動につなげることです。
-                </p>
+                    <p class="chain-note reveal">
+                        総合型選抜、探究授業、学校支援、制作、業務改善、システム開発。一見すると別々の事業ですが、共通しているのは、問いを起点に言葉を整え、学びや社会との接点を見つけ、選択と行動につなげることです。
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -1259,7 +1234,6 @@
                         </p>
                         <div class="biz-links">
                             <a class="biz-link" href="https://lp.p-quest.com/" target="_blank" rel="noopener noreferrer">Lighthouse を見る →</a>
-                            <a class="biz-link" href="https://lp.p-quest.com/shop" target="_blank" rel="noopener noreferrer">サービス・料金 →</a>
                         </div>
                     </div>
                 </div>
@@ -1299,7 +1273,7 @@
                         </div>
                         <div class="biz-item">
                             <div class="biz-item-name">
-                                Scholar Compass
+                                <a href="https://compass.p-quest.com/" target="_blank" rel="noopener noreferrer" style="border-bottom:1px solid var(--rule-strong);">Scholar Compass</a>
                                 <span class="tag gray">設計中</span>
                             </div>
                             <p>生徒一人ひとりの学習状況・探究の進捗・面談内容を整理し、伴走支援の質を高める進捗管理システム。</p>
@@ -1313,7 +1287,7 @@
                         <div class="biz-item">
                             <div class="biz-item-name">企業支援</div>
                             <p>
-                                教育現場で培った、問いを立てる力・言葉にする力・仕組みを整える力を、企業や地域事業者の課題整理に応用します。業務改善、仕組み化、採用支援、研修設計、必要に応じたAI活用支援。
+                                業務改善、仕組み化、採用・営業支援、人材育成・研修設計、資料作成、AI活用支援まで。現状の課題を伺い、整理から実装まで一貫して伴走します。まずはお気軽にご相談ください。
                             </p>
                         </div>
                         <div class="biz-item">
