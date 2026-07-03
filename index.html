@@ -24,7 +24,7 @@
       "email": "info@p-quest.com",
       "url": "https://p-quest.com/",
       "logo": "https://p-quest.com/profile.jpg",
-      "description": "課題の構造化（PIVOT）と解決策の実装（QUEST）を通じて、経営・教育・人生のステージを引き上げる伴走型エージェンシー。総合型選抜対策塾LIGHTHOUSEや教育統合管理システムClassnaviを運営。",
+      "description": "教育を起点に、問いを言葉にし、学びを進路や社会との接点につなげる会社。総合型選抜対策専門塾Lighthouseの運営を中心に、探究授業・キャリア教育などの学校支援、企業支援、制作支援、ClassNavi等のシステム開発まで横断して支援。",
       "founder": {
         "@type": "Person",
         "name": "田邊 勇人"
@@ -46,401 +46,1505 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-    <title>PIVOT & QUEST | 教育×コーチングで、人の人生を本質的に変える</title>
+    <title>株式会社PIVOT&QUEST | 想いを言葉に。言葉を未来へ。</title>
     <meta name="description"
-        content="総合型選抜専門塾LIGHTHOUSE、教育コンテンツ作成、探究授業・学習支援、Classnavi。コーチングを起点に「良い人生のための自己理解」を実現する教育ブランド。">
-    <meta name="keywords" content="PIVOT & QUEST, 総合型選抜, LIGHTHOUSE, 探究学習, コーチング, 自己探究, 教育, Quest Note, Classnavi, 田邊勇人">
+        content="株式会社PIVOT&QUESTは、教育を起点に、問いを言葉にし、選択と行動をつくる会社です。総合型選抜対策専門塾Lighthouseの運営を中心に、探究授業・キャリア教育・学校支援・制作・業務改善・システム開発(ClassNavi)まで横断して支援します。">
+    <meta name="keywords" content="PIVOT & QUEST, 総合型選抜, Lighthouse, 探究学習, キャリア教育, 学校支援, コーチング, 自己分析, ClassNavi, 田邊勇人">
     <link rel="canonical" href="https://p-quest.com/">
 
     <!-- OGP -->
-    <meta property="og:title" content="PIVOT & QUEST | 教育×コーチングで、人の人生を本質的に変える">
-    <meta property="og:description" content="総合型選抜専門塾LIGHTHOUSE、教育コンテンツ、探究授業支援、Classnavi。コーチングを起点に「良い人生のための自己理解」を実現。">
+    <meta property="og:title" content="株式会社PIVOT&QUEST | 想いを言葉に。言葉を未来へ。">
+    <meta property="og:description" content="教育を起点に、問いを言葉にし、選択と行動をつくる会社。総合型選抜対策専門塾Lighthouse、学校支援、制作、システム開発まで横断して支援します。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://p-quest.com/">
     <meta property="og:image" content="https://p-quest.com/profile.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <!-- Google Fonts -->
+
+    <!-- Fonts: しっぽり明朝(見出し) / Zen角ゴシックNew(本文) / Inter(英字ラベル) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Inter:wght@400;600&display=swap"
         rel="stylesheet">
-    <!-- Tailwind CSS (CDN for quick setup) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
-                        serif: ['Georgia', 'serif'],
-                    },
-                    colors: {
-                        brand: {
-                            dark: '#121110',
-                            light: '#fcfbf9',
-                            accent: '#e55f3a',
-                        }
-                    },
-                    borderRadius: {
-                        '3xl': '24px',
-                        '4xl': '32px',
-                    },
-                    boxShadow: {
-                        'soft': '0 10px 30px rgba(229, 95, 58, 0.05)',
-                    }
-                }
+
+    <style>
+        :root {
+            --paper: #F6F4EF;
+            --ink: #1C1A17;
+            --shu: #E55F3A;
+            --gray: #6E6A63;
+            --rule: rgba(28, 26, 23, 0.14);
+            --rule-strong: rgba(28, 26, 23, 0.55);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--paper);
+            color: var(--ink);
+            font-family: 'Zen Kaku Gothic New', sans-serif;
+            font-weight: 400;
+            line-height: 2;
+            -webkit-font-smoothing: antialiased;
+            font-feature-settings: "palt";
+        }
+
+        ::selection {
+            background: var(--shu);
+            color: #fff;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .serif {
+            font-family: 'Shippori Mincho', serif;
+        }
+
+        .en {
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        .wrap {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        @media (min-width: 768px) {
+            .wrap {
+                padding: 0 48px;
             }
         }
-    </script>
-    <style>
-        body {
-            background-color: #fafaf7;
-            color: #121110;
-            -webkit-font-smoothing: antialiased;
+
+        /* ---------- ナビゲーション ---------- */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 40;
+            background: rgba(246, 244, 239, 0.88);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--rule);
         }
 
-        .fade-in-up {
+        .nav-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 18px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        @media (min-width: 768px) {
+            .nav-inner {
+                padding: 18px 48px;
+            }
+        }
+
+        .nav-logo {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            letter-spacing: 0.24em;
+        }
+
+        .nav-links {
+            display: none;
+            align-items: center;
+            gap: 34px;
+            font-size: 13px;
+            letter-spacing: 0.14em;
+        }
+
+        .nav-links a:not(.nav-cta) {
+            padding-bottom: 2px;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .nav-links a:not(.nav-cta):hover {
+            border-color: var(--ink);
+        }
+
+        .nav-cta {
+            border: 1px solid var(--ink);
+            padding: 9px 22px;
+            font-size: 12px;
+            letter-spacing: 0.2em;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .nav-cta:hover {
+            background: var(--ink);
+            color: var(--paper);
+        }
+
+        @media (min-width: 900px) {
+            .nav-links {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: none;
+            }
+        }
+
+        .menu-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--ink);
+            padding: 6px;
+            margin-right: -6px;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            border-top: 1px solid var(--rule);
+            padding: 8px 24px 20px;
+        }
+
+        .mobile-menu.open {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            padding: 13px 0;
+            font-size: 14px;
+            letter-spacing: 0.14em;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .mobile-menu a:last-child {
+            border-bottom: none;
+            color: var(--shu);
+            font-weight: 700;
+        }
+
+        /* ---------- 縦書き ---------- */
+        .tate {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+
+        /* ---------- ヒーロー ---------- */
+        .hero {
+            min-height: 100svh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            padding: 110px 0 90px;
+        }
+
+        .hero-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            gap: 40px;
+        }
+
+        /* 縦書き: row-reverse で DOM順=読み順(右→左)にする */
+        .hero-headline {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+            gap: clamp(18px, 3vw, 48px);
+        }
+
+        .hero-headline h1 {
+            font-family: 'Shippori Mincho', serif;
+            font-weight: 600;
+            font-size: clamp(40px, 9.5vh, 92px);
+            line-height: 1.62;
+            letter-spacing: 0.14em;
+        }
+
+        .hero-headline h1 span {
+            display: block;
+        }
+
+        .hero-sub {
+            font-family: 'Shippori Mincho', serif;
+            font-size: clamp(15px, 2.2vh, 20px);
+            letter-spacing: 0.3em;
+            color: var(--gray);
+            padding-top: 0.4em;
+        }
+
+        .hero-side {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: 28px;
+            max-width: 400px;
+        }
+
+        .hero-eyebrow {
+            font-size: 11px;
+            color: var(--gray);
+        }
+
+        .hero-lead {
+            font-size: 14px;
+            line-height: 2.3;
+            color: var(--ink);
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 13px;
+            letter-spacing: 0.2em;
+            border-bottom: 1px solid var(--rule-strong);
+            padding-bottom: 8px;
+            width: fit-content;
+            transition: color 0.3s, border-color 0.3s;
+        }
+
+        .hero-cta:hover {
+            color: var(--shu);
+            border-color: var(--shu);
+        }
+
+        /* 朱印 */
+        .seal {
+            width: 58px;
+            height: 58px;
+            background: var(--shu);
+            color: #fff;
+            font-family: 'Shippori Mincho', serif;
+            font-weight: 700;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3px;
+            transform: rotate(-3deg);
+            box-shadow: 0 1px 0 rgba(28, 26, 23, 0.1);
+            user-select: none;
+        }
+
+        .hero-seal {
+            align-self: flex-start;
+        }
+
+        @media (max-width: 767px) {
+            .hero {
+                padding: 92px 0 64px;
+                min-height: auto;
+            }
+
+            /* モバイルは見出しを先頭に(column-reverse) */
+            .hero-grid {
+                flex-direction: column-reverse;
+                gap: 52px;
+            }
+
+            .hero-headline {
+                justify-content: center;
+                min-height: calc(100svh - 200px);
+                align-items: center;
+            }
+
+            .hero-headline h1 {
+                font-size: clamp(38px, 10.5vw, 52px);
+            }
+
+            .hero-side {
+                max-width: none;
+            }
+        }
+
+        /* ヒーロー登場アニメーション: 書字方向(上→下)のワイプ */
+        .wipe {
+            clip-path: inset(0 0 100% 0);
+            transition: clip-path 1.1s cubic-bezier(0.7, 0, 0.2, 1);
+        }
+
+        .loaded .wipe {
+            clip-path: inset(0 0 0% 0);
+        }
+
+        .loaded .wipe.d1 {
+            transition-delay: 0.25s;
+        }
+
+        .loaded .wipe.d2 {
+            transition-delay: 0.5s;
+        }
+
+        .stamp {
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: rotate(-3deg) scale(1.25);
+            transition: opacity 0.35s ease-out 1.15s, transform 0.35s cubic-bezier(0.3, 1.4, 0.5, 1) 1.15s;
         }
 
-        .fade-in-up.visible {
+        .loaded .stamp {
+            opacity: 1;
+            transform: rotate(-3deg) scale(1);
+        }
+
+        .fade {
+            opacity: 0;
+            transform: translateY(14px);
+            transition: opacity 0.9s ease 1.3s, transform 0.9s ease 1.3s;
+        }
+
+        .loaded .fade {
             opacity: 1;
             transform: translateY(0);
         }
 
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(229, 95, 58, 0.08);
-            border-radius: 24px;
+        /* ---------- スクロールリビール ---------- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        /* Noise Grain */
-        .noise {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ---------- セクション共通 ---------- */
+        section.block {
+            padding: 110px 0;
+        }
+
+        .sec-head {
+            display: flex;
+            align-items: flex-start;
+            gap: 28px;
+            border-top: 1px solid var(--rule-strong);
+            padding-top: 34px;
+            margin-bottom: 64px;
+        }
+
+        .sec-num {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 1;
+            padding-top: 6px;
+        }
+
+        .sec-label {
+            font-size: 10px;
+            color: var(--gray);
+            display: block;
+            margin-bottom: 14px;
+        }
+
+        .sec-title {
+            font-family: 'Shippori Mincho', serif;
+            font-weight: 600;
+            font-size: clamp(26px, 4.2vw, 40px);
+            line-height: 1.7;
+            letter-spacing: 0.06em;
+        }
+
+        /* ---------- 一、理念 ---------- */
+        .phi-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+        }
+
+        @media (min-width: 900px) {
+            .phi-grid {
+                grid-template-columns: 5fr 7fr;
+                gap: 96px;
+            }
+        }
+
+        .phi-body p {
+            font-size: 15px;
+            color: var(--ink);
+            margin-bottom: 2em;
+        }
+
+        .phi-quote {
+            border-left: 2px solid var(--shu);
+            padding: 6px 0 6px 28px;
+            margin-top: 40px;
+        }
+
+        .phi-quote p {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 17px;
+            line-height: 2.2;
+            margin: 0;
+        }
+
+        /* ---------- 二、構造 ---------- */
+        .chain {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            gap: 0;
+            margin: 80px 0 64px;
+        }
+
+        .chain-word {
+            font-family: 'Shippori Mincho', serif;
+            font-weight: 600;
+            font-size: clamp(22px, 3.4vw, 38px);
+            letter-spacing: 0.12em;
+            white-space: nowrap;
+            position: relative;
+            padding: 10px 4px;
+        }
+
+        .chain-dash {
+            flex: 0 1 72px;
+            min-width: 18px;
+            height: 1px;
+            background: var(--rule-strong);
+            margin: 0 10px;
+        }
+
+        .chain-word.goal {
+            color: var(--paper);
+            background: var(--ink);
+            padding: 10px 18px;
+        }
+
+        /* 問い の朱円(赤ペン) */
+        .chain-word.core {
+            color: var(--shu);
+            padding: 10px 14px;
+        }
+
+        .core-circle {
+            position: absolute;
+            inset: -6px -8px;
+            width: calc(100% + 16px);
+            height: calc(100% + 12px);
+            overflow: visible;
             pointer-events: none;
-            z-index: 50;
-            opacity: 0.02;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        .core-circle path {
+            fill: none;
+            stroke: var(--shu);
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-dasharray: 340;
+            stroke-dashoffset: 340;
+        }
+
+        .visible .core-circle path {
+            transition: stroke-dashoffset 1.2s ease-out 0.5s;
+            stroke-dashoffset: 0;
+        }
+
+        @media (max-width: 860px) {
+            .chain {
+                flex-direction: column;
+                margin: 56px 0 48px;
+            }
+
+            .chain-dash {
+                flex: none;
+                width: 1px;
+                min-width: 0;
+                height: 30px;
+                margin: 6px 0;
+            }
+        }
+
+        .chain-note {
+            max-width: 640px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 14px;
+            color: var(--gray);
+        }
+
+        /* ---------- 三、事業展開(目次型) ---------- */
+        .biz-row {
+            display: grid;
+            grid-template-columns: 56px 1fr;
+            gap: 24px;
+            padding: 52px 0;
+            border-top: 1px solid var(--rule);
+        }
+
+        @media (min-width: 900px) {
+            .biz-row {
+                grid-template-columns: 72px 5fr 6fr;
+                gap: 48px;
+            }
+        }
+
+        .biz-role {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 13px;
+            letter-spacing: 0.34em;
+            color: var(--shu);
+            writing-mode: vertical-rl;
+            height: fit-content;
+            padding-top: 8px;
+        }
+
+        .biz-role.sub {
+            color: var(--gray);
+        }
+
+        .biz-name {
+            font-family: 'Shippori Mincho', serif;
+            font-weight: 600;
+            font-size: clamp(24px, 3.2vw, 34px);
+            letter-spacing: 0.08em;
+            line-height: 1.6;
+        }
+
+        .biz-name .biz-en {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 10px;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--gray);
+            margin-top: 14px;
+        }
+
+        .biz-desc {
+            font-size: 14px;
+            color: var(--ink);
+        }
+
+        @media (max-width: 899px) {
+            .biz-desc {
+                grid-column: 2;
+            }
+        }
+
+        .biz-desc p {
+            margin-bottom: 1.6em;
+        }
+
+        .biz-desc p:last-child {
+            margin-bottom: 0;
+        }
+
+        .biz-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            margin-top: 28px;
+        }
+
+        .biz-link {
+            font-size: 12px;
+            letter-spacing: 0.18em;
+            border-bottom: 1px solid var(--rule-strong);
+            padding-bottom: 6px;
+            transition: color 0.3s, border-color 0.3s;
+        }
+
+        .biz-link:hover {
+            color: var(--shu);
+            border-color: var(--shu);
+        }
+
+        .biz-item {
+            padding: 18px 0;
+            border-top: 1px solid var(--rule);
+        }
+
+        .biz-item:first-child {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .biz-item-name {
+            font-weight: 700;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            font-size: 10px;
+            letter-spacing: 0.16em;
+            color: var(--shu);
+            border: 1px solid currentColor;
+            padding: 2px 10px;
+            font-weight: 500;
+        }
+
+        .tag.gray {
+            color: var(--gray);
+        }
+
+        .biz-item p {
+            font-size: 13px;
+            color: var(--gray);
+            margin-top: 6px;
+        }
+
+        .biz-pair {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        @media (min-width: 900px) {
+            .biz-pair {
+                grid-template-columns: 1fr 1fr;
+                gap: 64px;
+            }
+
+            .biz-pair .biz-item {
+                border-top: none;
+                padding-top: 0;
+            }
+        }
+
+        /* ---------- 四、実績 ---------- */
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-top: 1px solid var(--rule);
+            border-left: 1px solid var(--rule);
+        }
+
+        @media (min-width: 900px) {
+            .stats {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        .stat {
+            border-right: 1px solid var(--rule);
+            border-bottom: 1px solid var(--rule);
+            padding: 44px 28px 40px;
+        }
+
+        .stat-num {
+            font-family: 'Shippori Mincho', serif;
+            font-weight: 600;
+            font-size: clamp(34px, 4.6vw, 54px);
+            line-height: 1.2;
+            letter-spacing: 0.02em;
+        }
+
+        .stat-num small {
+            font-size: 0.45em;
+            color: var(--gray);
+            letter-spacing: 0.1em;
+            margin-left: 2px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--gray);
+            margin-top: 14px;
+            line-height: 1.9;
+        }
+
+        .stats-note {
+            font-size: 13px;
+            color: var(--gray);
+            margin-top: 36px;
+            max-width: 680px;
+        }
+
+        /* ---------- 五、相談 ---------- */
+        .consult-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 900px) {
+            .consult-grid {
+                grid-template-columns: 1fr 1fr;
+                column-gap: 96px;
+            }
+        }
+
+        .consult-group {
+            padding: 44px 0;
+            border-top: 1px solid var(--rule);
+        }
+
+        .consult-group h3 {
+            font-family: 'Shippori Mincho', serif;
+            font-weight: 600;
+            font-size: 21px;
+            letter-spacing: 0.1em;
+            margin-bottom: 22px;
+        }
+
+        .consult-group li {
+            list-style: none;
+            font-size: 14px;
+            color: var(--ink);
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 10px;
+            line-height: 1.9;
+        }
+
+        .consult-group li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.85em;
+            width: 7px;
+            height: 1px;
+            background: var(--shu);
+        }
+
+        /* ---------- 六、会社 ---------- */
+        .founder {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 44px;
+            margin-bottom: 96px;
+        }
+
+        @media (min-width: 900px) {
+            .founder {
+                grid-template-columns: 4fr 8fr;
+                gap: 80px;
+            }
+        }
+
+        .founder-photo img {
+            width: 100%;
+            max-width: 320px;
+            aspect-ratio: 1;
+            object-fit: cover;
+            filter: saturate(0.9);
+        }
+
+        .founder-photo figcaption {
+            font-size: 11px;
+            color: var(--gray);
+            margin-top: 14px;
+            letter-spacing: 0.12em;
+        }
+
+        .founder-name {
+            font-family: 'Shippori Mincho', serif;
+            font-weight: 600;
+            font-size: 28px;
+            letter-spacing: 0.14em;
+        }
+
+        .founder-role {
+            font-size: 10px;
+            color: var(--gray);
+            margin: 10px 0 28px;
+        }
+
+        .founder-bio {
+            font-size: 14px;
+            color: var(--ink);
+        }
+
+        .founder-bio p {
+            margin-bottom: 1.6em;
+        }
+
+        .founder-bio a {
+            color: var(--shu);
+            border-bottom: 1px solid currentColor;
+        }
+
+        .company-table {
+            border-top: 1px solid var(--rule-strong);
+        }
+
+        .company-table .row {
+            display: grid;
+            grid-template-columns: 1fr;
+            padding: 26px 0;
+            border-bottom: 1px solid var(--rule);
+            gap: 8px;
+        }
+
+        @media (min-width: 768px) {
+            .company-table .row {
+                grid-template-columns: 220px 1fr;
+                gap: 32px;
+            }
+        }
+
+        .company-table dt {
+            font-size: 11px;
+            color: var(--gray);
+            padding-top: 5px;
+        }
+
+        .company-table dd {
+            font-size: 15px;
+        }
+
+        .company-table dd ul {
+            list-style: none;
+        }
+
+        .company-table dd ul li {
+            padding-left: 18px;
+            position: relative;
+            margin-bottom: 8px;
+        }
+
+        .company-table dd ul li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.9em;
+            width: 7px;
+            height: 1px;
+            background: var(--rule-strong);
+        }
+
+        .company-table dd a {
+            color: var(--shu);
+            border-bottom: 1px solid currentColor;
+        }
+
+        /* ---------- 結び(CTA) ---------- */
+        .closing {
+            padding: 140px 0 150px;
+            text-align: center;
+            border-top: 1px solid var(--rule-strong);
+        }
+
+        .closing-title {
+            font-family: 'Shippori Mincho', serif;
+            font-weight: 600;
+            font-size: clamp(28px, 5.4vw, 52px);
+            letter-spacing: 0.12em;
+            line-height: 1.8;
+            word-break: keep-all;
+        }
+
+        .closing-lead {
+            font-size: 14px;
+            color: var(--gray);
+            margin: 32px auto 56px;
+            max-width: 520px;
+        }
+
+        .closing-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 26px;
+        }
+
+        @media (min-width: 640px) {
+            .closing-actions {
+                flex-direction: row;
+                justify-content: center;
+                gap: 44px;
+            }
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            background: var(--shu);
+            color: #fff;
+            font-size: 13px;
+            letter-spacing: 0.26em;
+            padding: 20px 52px;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: var(--ink);
+        }
+
+        .btn-quiet {
+            font-size: 13px;
+            letter-spacing: 0.18em;
+            border-bottom: 1px solid var(--rule-strong);
+            padding-bottom: 7px;
+            transition: color 0.3s, border-color 0.3s;
+        }
+
+        .btn-quiet:hover {
+            color: var(--shu);
+            border-color: var(--shu);
+        }
+
+        .closing-seal {
+            margin: 72px auto 0;
+        }
+
+        /* ---------- フッター ---------- */
+        footer {
+            border-top: 1px solid var(--rule);
+            padding: 44px 0 52px;
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            align-items: center;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .footer-inner {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            font-size: 11px;
+            letter-spacing: 0.14em;
+            color: var(--gray);
+        }
+
+        .footer-links a:hover {
+            color: var(--shu);
+        }
+
+        .footer-copy {
+            font-size: 11px;
+            color: var(--gray);
+            letter-spacing: 0.1em;
+        }
+
+        /* ---------- Reduced motion ---------- */
+        @media (prefers-reduced-motion: reduce) {
+
+            .wipe,
+            .stamp,
+            .fade,
+            .reveal {
+                transition: none !important;
+                clip-path: none !important;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+
+            .stamp {
+                transform: rotate(-3deg) !important;
+            }
+
+            .core-circle path {
+                stroke-dashoffset: 0 !important;
+                transition: none !important;
+            }
+
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--shu);
+            outline-offset: 3px;
         }
     </style>
 </head>
 
-<body class="selection:bg-brand-accent selection:text-white">
-    <div class="noise"></div>
-
+<body>
     <!-- Navigation -->
-    <nav class="fixed top-4 left-4 right-4 max-w-7xl mx-auto z-40 transition-all duration-300 glass-panel shadow-soft" id="navbar">
-        <div class="px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold tracking-[0.2em] uppercase text-brand-dark">Pivot & Quest</a>
-            <div class="hidden md:flex space-x-8 text-sm tracking-wider text-gray-600 font-medium">
-                <a href="#vision" class="hover:text-brand-accent transition-colors">VISION</a>
-                <a href="#services" class="hover:text-brand-accent transition-colors">SERVICES</a>
-                <a href="#about" class="hover:text-brand-accent transition-colors">ABOUT</a>
-                <a href="#company" class="hover:text-brand-accent transition-colors">COMPANY</a>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">PIVOT & QUEST</a>
+            <div class="nav-links">
+                <a href="#philosophy">理念</a>
+                <a href="#structure">構造</a>
+                <a href="#services">事業</a>
+                <a href="#results">実績</a>
+                <a href="#consulting">相談</a>
+                <a href="#company">会社</a>
+                <a href="#contact" class="nav-cta">お問い合わせ</a>
             </div>
-            <button id="menu-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false"
-                class="md:hidden p-2 -mr-2 text-brand-dark hover:text-brand-accent transition-colors">
-                <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            <button class="menu-btn" id="menu-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false">
+                <svg id="menu-icon-open" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18" />
                 </svg>
-                <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                <svg id="menu-icon-close" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="display:none">
+                    <path stroke-linecap="round" d="M5 5l14 14M19 5L5 19" />
                 </svg>
             </button>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 flex flex-col space-y-4 text-sm tracking-wider text-gray-600 font-medium">
-            <a href="#vision" class="hover:text-brand-accent transition-colors">VISION</a>
-            <a href="#services" class="hover:text-brand-accent transition-colors">SERVICES</a>
-            <a href="#about" class="hover:text-brand-accent transition-colors">ABOUT</a>
-            <a href="#company" class="hover:text-brand-accent transition-colors">COMPANY</a>
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#philosophy">理念</a>
+            <a href="#structure">構造</a>
+            <a href="#services">事業</a>
+            <a href="#results">実績</a>
+            <a href="#consulting">相談</a>
+            <a href="#company">会社</a>
+            <a href="#contact">お問い合わせ</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="h-screen flex flex-col justify-center items-center px-6 relative overflow-hidden bg-[#fafaf7]">
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#fafaf7] z-0"></div>
-        <div class="relative z-10 text-center fade-in-up observer-target">
-            <h1 class="text-5xl md:text-8xl font-black mb-6 tracking-tighter leading-tight text-brand-dark">
-                STRUCTURE <br class="md:hidden">THE CHAOS.<br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-dark">FIND THE
-                    CORE.</span>
-            </h1>
-            <p
-                class="mt-8 text-gray-600 text-lg md:text-xl tracking-widest max-w-2xl mx-auto font-light leading-relaxed">
-                混沌とした課題を構造化し、<br class="md:hidden">あなたの「真の核」を見つけ出す。
-            </p>
-        </div>
-
-        <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3">
-                </path>
-            </svg>
-        </div>
-    </section>
-
-    <!-- Vision Section -->
-    <section id="vision" class="py-32 px-6 bg-[#fafaf7] relative">
-        <div class="max-w-4xl mx-auto observer-target fade-in-up bg-white rounded-4xl border border-gray-100 shadow-soft p-12 md:p-20">
-            <h2 class="text-brand-accent text-sm font-bold tracking-[0.3em] uppercase mb-4">Vision</h2>
-            <h3 class="text-3xl md:text-5xl font-bold leading-tight mb-12 text-brand-dark">
-                すべての人が、<br>自分の可能性を諦めない世界
-            </h3>
-            <div class="space-y-8 text-gray-600 leading-loose text-lg font-light">
-                <p>
-                    何から手をつけていいか分からない混沌。表面的なノウハウだけでは解決しない根本的な閉塞感。<br>
-                    私たちは、その状態を「構造化」し、あなた自身の中に眠る「答え（The Core）」を共に引き出します。
+    <!-- ヒーロー: 縦書き -->
+    <header class="hero">
+        <div class="wrap hero-grid">
+            <div class="hero-side">
+                <p class="hero-eyebrow en fade">Pivot & Quest Inc. — Education / Language / Structure</p>
+                <p class="hero-lead fade">
+                    株式会社PIVOT&QUESTは、教育を起点に、問いを言葉にし、学びを進路や社会との接点につなげる会社です。
                 </p>
-                <p>
-                    PIVOT & QUEST は、枠の向こう側を描き続ける人のための、思考と行動の伴走パートナーです。
-                </p>
+                <a href="#philosophy" class="hero-cta fade">
+                    私たちの考え
+                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m0 0l6-6m-6 6l-6-6" />
+                    </svg>
+                </a>
+            </div>
+            <div class="hero-headline">
+                <h1 class="tate">
+                    <span class="wipe">想いを言葉に。</span>
+                    <span class="wipe d1">言葉を未来へ。</span>
+                </h1>
+                <p class="hero-sub tate wipe d2">問いを起点に、選択と行動をつくる。</p>
+                <div class="seal hero-seal stamp" aria-hidden="true" style="align-self: flex-end;">問</div>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Services Section -->
-    <section id="services" class="py-32 px-6 bg-[#fafaf7] relative">
-        <div class="max-w-7xl mx-auto">
-            <div class="observer-target fade-in-up mb-16 max-w-3xl">
-                <h2 class="text-brand-accent text-sm font-bold tracking-[0.3em] uppercase mb-4">Services</h2>
-                <h3 class="text-3xl md:text-5xl font-bold leading-tight text-brand-dark mb-8">
-                    すべては、<br class="md:hidden">コーチングから始まる。
-                </h3>
-                <p class="text-gray-600 leading-loose text-lg font-light">
-                    私たちの事業は、独立した3つのサービスの寄せ集めではありません。核にあるのは「良い人生のための自己理解」を引き出す教育×コーチング。その核が実践の現場で磨かれ、プロダクトとしてより多くの人へ広がっていく——同心円の構造です。
-                </p>
-            </div>
-
-            <!-- Concentric structure diagram -->
-            <div class="observer-target fade-in-up flex justify-center mb-20">
-                <svg viewBox="0 0 480 480" class="w-full max-w-xl" role="img"
-                    aria-label="事業構造の同心円図。核に教育×コーチング、その周りに実践の現場であるLIGHTHOUSE、外側に知見の展開であるQuest NoteとClassnavi。">
-                    <circle cx="240" cy="240" r="228" fill="rgba(229, 95, 58, 0.04)" stroke="rgba(229, 95, 58, 0.15)" stroke-width="1.5" stroke-dasharray="4 6" />
-                    <circle cx="240" cy="240" r="158" fill="rgba(229, 95, 58, 0.07)" stroke="rgba(229, 95, 58, 0.25)" stroke-width="1.5" />
-                    <circle cx="240" cy="240" r="88" fill="#e55f3a" />
-                    <text x="240" y="234" text-anchor="middle" fill="#ffffff" font-size="19" font-weight="700" font-family="Inter, 'Noto Sans JP', sans-serif">教育×コーチング</text>
-                    <text x="240" y="258" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="11" letter-spacing="2" font-family="Inter, 'Noto Sans JP', sans-serif">THE CORE</text>
-                    <text x="240" y="112" text-anchor="middle" fill="#121110" font-size="17" font-weight="700" font-family="Inter, 'Noto Sans JP', sans-serif">LIGHTHOUSE</text>
-                    <text x="240" y="132" text-anchor="middle" fill="#6b7280" font-size="11" font-family="Inter, 'Noto Sans JP', sans-serif">実践の現場</text>
-                    <text x="240" y="42" text-anchor="middle" fill="#121110" font-size="15" font-weight="700" font-family="Inter, 'Noto Sans JP', sans-serif">Quest Note / Classnavi</text>
-                    <text x="240" y="61" text-anchor="middle" fill="#6b7280" font-size="11" font-family="Inter, 'Noto Sans JP', sans-serif">知見の展開</text>
-                </svg>
-            </div>
-
-            <!-- Core service: LIGHTHOUSE -->
-            <div class="bg-white border border-gray-100 rounded-4xl p-8 md:p-12 shadow-soft hover:shadow-lg hover:border-gray-200 transition-all duration-300 observer-target fade-in-up group mb-8">
-                <div class="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-12">
-                    <div class="flex-1">
-                        <p class="text-brand-accent text-xs font-bold tracking-[0.3em] uppercase mb-4">Core ── 実践の現場</p>
-                        <h3 class="text-3xl font-bold mb-3 tracking-wide text-brand-dark">LIGHTHOUSE</h3>
-                        <p class="text-gray-400 text-xs tracking-widest uppercase mb-6">総合型選抜専門コーチング塾 / toC・toB</p>
-                        <p class="text-gray-600 leading-relaxed text-sm md:text-base">
-                            コーチングの核をもっとも濃く体現する旗艦事業。独自メソッド「必然性の一本化」で、生徒一人ひとりのルーツから「なぜ自分がやるのか」を言語化し、難関大合格とその先の良い人生を実現する。学校法人への導入支援も対応。
-                        </p>
-                    </div>
-                    <div class="flex flex-col sm:flex-row lg:flex-col sm:items-center lg:items-start gap-4 flex-shrink-0">
-                        <a href="https://lp.p-quest.com" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center text-sm font-bold tracking-widest uppercase text-brand-dark hover:text-brand-accent transition-colors">
-                            View Details
-                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                            </svg>
-                        </a>
-                        <a href="https://lp.p-quest.com/tools/shindan.html" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center text-xs font-bold bg-brand-accent/10 text-brand-accent px-4 py-2 rounded-full hover:bg-brand-accent hover:text-white transition-all duration-200">
-                            合格診断を受ける
-                            <svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Derived services -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-soft hover:shadow-lg hover:border-gray-200 transition-all duration-300 observer-target fade-in-up group flex flex-col justify-between"
-                    style="transition-delay: 100ms;">
+    <main>
+        <!-- 一、理念 -->
+        <section id="philosophy" class="block">
+            <div class="wrap">
+                <div class="sec-head reveal">
+                    <span class="sec-num" aria-hidden="true">一</span>
                     <div>
-                        <p class="text-brand-accent text-xs font-bold tracking-[0.3em] uppercase mb-4">Derived ── 知見の展開</p>
-                        <h3 class="text-2xl font-bold mb-3 tracking-wide text-brand-dark">Quest Note</h3>
-                        <p class="text-gray-400 text-xs tracking-widest uppercase mb-4">AI対話型自己探求アプリ / toC・toB</p>
-                        <p class="text-gray-600 leading-relaxed mb-8 text-sm">
-                            コーチングの現場で磨かれた「問い」をアプリにした、AI対話型の自己探求ツール。採点や評価ではなく、対話を通じて自分の言葉と核を見つけることを支援する。私立中高への探究授業・学習支援の運営サポート（toB）にも展開。
-                        </p>
-                    </div>
-                    <div class="mt-auto">
-                        <a href="https://quest.p-quest.com/" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center text-sm font-bold tracking-widest uppercase text-brand-dark hover:text-brand-accent transition-colors">
-                            View Details
-                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                            </svg>
-                        </a>
+                        <span class="sec-label en">Philosophy</span>
+                        <h2 class="sec-title">中心にあるのは、教育。</h2>
                     </div>
                 </div>
-
-                <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-soft hover:shadow-lg hover:border-gray-200 transition-all duration-300 observer-target fade-in-up group flex flex-col justify-between"
-                    style="transition-delay: 200ms;">
-                    <div>
-                        <p class="text-brand-accent text-xs font-bold tracking-[0.3em] uppercase mb-4">Derived ── 知見の展開</p>
-                        <h3 class="text-2xl font-bold mb-3 tracking-wide text-brand-dark">Classnavi</h3>
-                        <p class="text-gray-400 text-xs tracking-widest uppercase mb-4">学習支援 統合管理システム / toB・toC</p>
-                        <p class="text-gray-600 leading-relaxed mb-8 text-sm">
-                            学習支援運営の知見から生まれた、学校内併設型の学習支援サービス向け統合管理システム。学習記録、出欠、指導報告書の一元管理により、学校・生徒・チューター間の連携を構造化・スマート化する。
-                        </p>
-                    </div>
-                    <div class="mt-auto">
-                        <a href="https://lp.classnavi.p-quest.com" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center text-sm font-bold tracking-widest uppercase text-brand-dark hover:text-brand-accent transition-colors">
-                            View Details
-                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-32 px-6 bg-[#fafaf7]">
-        <div class="max-w-4xl mx-auto observer-target fade-in-up bg-white rounded-4xl border border-gray-100 shadow-soft p-12 md:p-20">
-            <h2 class="text-brand-accent text-sm font-bold tracking-[0.3em] uppercase mb-12">About</h2>
-            <div class="flex flex-col md:flex-row gap-12 items-start">
-                <div class="w-32 h-32 md:w-40 md:h-40 flex-shrink-0 relative">
-                    <img src="./profile.jpg" alt="Yuto Tanabe"
-                        class="w-full h-full object-cover rounded-full border-4 border-[#fafaf7] shadow-xl">
-                </div>
-                <div>
-                    <h3 class="text-2xl font-bold mb-2 text-brand-dark">Yuto Tanabe</h3>
-                    <p class="text-gray-400 mb-6 tracking-widest text-xs uppercase font-semibold">Founder / Representative</p>
-                    <p class="text-gray-600 leading-relaxed font-light text-sm md:text-base">
-                        論理と思考の整理を通じ、複雑に絡み合った課題を構造化するプロフェッショナル。<br><br>
-                        「人は誰でも、自分の中に答えを持っている」という信念のもと、ビジネスと自己実現の壁に直面する多くのステークホルダーに伴走。表面的なスキルやテンプレートではなく、その人が持つ真の核（The
-                        Core）を引き出し、言語化・体系化することで、唯一無二の価値創出を支援している。<br><br>
-                        また、公式note<a href="https://note.com/veintiuno" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:underline font-medium">「ちーず｜note」</a>では、教育や自己探究、人生の構造化に関する知見を発信している。
+                <div class="phi-grid">
+                    <p class="reveal" style="font-family:'Shippori Mincho',serif; font-size:17px; line-height:2.4; letter-spacing:0.04em;">
+                        すべての事業を、<br>同列には並べません。
                     </p>
+                    <div class="phi-body reveal">
+                        <p>
+                            私たちは、探究、自己分析、進路支援、文章表現、学校支援、業務改善、制作、システム開発まで横断して支援しています。その土台にあるのは、総合型選抜対策専門塾
+                            Lighthouse の運営、探究授業、進路指導という教育現場の実務です。現場で見えてきた課題を、必要に応じて制作、仕組み化、システム開発へと展開しています。
+                        </p>
+                        <div class="phi-quote">
+                            <p>
+                                AIやシステムは、目的ではありません。<br>
+                                人が考え、学び、対話し、判断し、<br>
+                                実践する時間を増やすための手段です。
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Company Section -->
-    <section id="company" class="py-32 px-6 bg-[#fafaf7] relative">
-        <div class="max-w-4xl mx-auto observer-target fade-in-up bg-white rounded-4xl border border-gray-100 shadow-soft p-12 md:p-20">
-            <h2 class="text-brand-accent text-sm font-bold tracking-[0.3em] uppercase mb-12">Company Profile</h2>
+        <!-- 二、構造 -->
+        <section id="structure" class="block">
+            <div class="wrap">
+                <div class="sec-head reveal">
+                    <span class="sec-num" aria-hidden="true">二</span>
+                    <div>
+                        <span class="sec-label en">Structure</span>
+                        <h2 class="sec-title">問いを起点に、未来までつなげる。</h2>
+                    </div>
+                </div>
 
-            <div class="border-t border-gray-100">
-                <dl class="divide-y divide-gray-100 text-sm md:text-base">
-                    <div class="py-6 flex flex-col md:flex-row md:items-start">
-                        <dt
-                            class="w-full md:w-1/3 font-bold text-gray-400 mb-2 md:mb-0 uppercase tracking-widest text-xs mt-1">
-                            社名</dt>
-                        <dd class="w-full md:w-2/3 text-gray-800">株式会社PIVOT＆QUEST（PIVOT & QUEST Inc.）</dd>
+                <div class="chain reveal" role="list" aria-label="事業の構造: 想いから未来まで">
+                    <span class="chain-word" role="listitem">想い</span>
+                    <span class="chain-dash" aria-hidden="true"></span>
+                    <span class="chain-word" role="listitem">言葉</span>
+                    <span class="chain-dash" aria-hidden="true"></span>
+                    <span class="chain-word core" role="listitem">
+                        問い
+                        <svg class="core-circle" viewBox="0 0 110 72" aria-hidden="true">
+                            <path d="M55 6 C 88 4, 106 16, 104 36 C 102 58, 78 68, 52 66 C 24 64, 4 54, 6 34 C 8 14, 32 5, 62 8" />
+                        </svg>
+                    </span>
+                    <span class="chain-dash" aria-hidden="true"></span>
+                    <span class="chain-word" role="listitem">学び</span>
+                    <span class="chain-dash" aria-hidden="true"></span>
+                    <span class="chain-word" role="listitem">選択</span>
+                    <span class="chain-dash" aria-hidden="true"></span>
+                    <span class="chain-word" role="listitem">行動</span>
+                    <span class="chain-dash" aria-hidden="true"></span>
+                    <span class="chain-word goal" role="listitem">未来</span>
+                </div>
+
+                <p class="chain-note reveal">
+                    総合型選抜、探究授業、学校支援、制作、業務改善、システム開発。一見別々の事業に見えて、共通しているのは、問いを起点に言葉を整え、学びや社会との接点を見つけ、選択と行動につなげることです。
+                </p>
+            </div>
+        </section>
+
+        <!-- 三、事業展開 -->
+        <section id="services" class="block">
+            <div class="wrap">
+                <div class="sec-head reveal">
+                    <span class="sec-num" aria-hidden="true">三</span>
+                    <div>
+                        <span class="sec-label en">Services</span>
+                        <h2 class="sec-title">事業展開</h2>
                     </div>
-                    <div class="py-6 flex flex-col md:flex-row md:items-start">
-                        <dt
-                            class="w-full md:w-1/3 font-bold text-gray-400 mb-2 md:mb-0 uppercase tracking-widest text-xs mt-1">
-                            代表取締役</dt>
-                        <dd class="w-full md:w-2/3 text-gray-800">田邊 勇人 (Yuto Tanabe)</dd>
+                </div>
+
+                <!-- 中核: 教育支援 -->
+                <div class="biz-row reveal">
+                    <span class="biz-role tate">中核事業</span>
+                    <h3 class="biz-name">
+                        教育支援
+                        <span class="biz-en">Lighthouse — 総合型選抜対策専門塾</span>
+                    </h3>
+                    <div class="biz-desc">
+                        <p>
+                            総合型選抜対策専門塾 Lighthouse を中心に、自己分析、志望理由書・小論文の指導、面接対策、探究学習支援、伴走型メンタリングを行います。
+                        </p>
+                        <p>
+                            生徒の想いをそのまま形にするのではなく、その想いがどんな問いにつながり、どの学問と関係し、どんな社会課題や仕事と接続するのかまで深めます。合格だけをゴールにせず、自分の選択に納得できる進路を支援します。
+                        </p>
+                        <div class="biz-links">
+                            <a class="biz-link" href="https://lp.p-quest.com/" target="_blank" rel="noopener noreferrer">Lighthouse を見る →</a>
+                            <a class="biz-link" href="https://lp.p-quest.com/shop" target="_blank" rel="noopener noreferrer">サービス・料金 →</a>
+                        </div>
                     </div>
-                    <div class="py-6 flex flex-col md:flex-row md:items-start">
-                        <dt
-                            class="w-full md:w-1/3 font-bold text-gray-400 mb-2 md:mb-0 uppercase tracking-widest text-xs mt-1">
-                            所在地</dt>
-                        <dd class="w-full md:w-2/3 text-gray-800">茨城県つくば市谷田部1144-392</dd>
+                </div>
+
+                <!-- 展開: 学校支援 -->
+                <div class="biz-row reveal">
+                    <span class="biz-role tate">展開</span>
+                    <h3 class="biz-name">
+                        学校支援
+                        <span class="biz-en">Inquiry / Career Education</span>
+                    </h3>
+                    <div class="biz-desc">
+                        <p>
+                            探究授業の設計、キャリア教育、問いの立て方に関する授業、文章表現講座、教育プログラム開発、学校運営支援。
+                        </p>
+                        <p>
+                            問いを立てること自体を目的にせず、社会との接点、教科学習との接続、学ぶ理由の発見までを重視します。
+                        </p>
                     </div>
-                    <div class="py-6 flex flex-col md:flex-row md:items-start">
-                        <dt
-                            class="w-full md:w-1/3 font-bold text-gray-400 mb-2 md:mb-0 uppercase tracking-widest text-xs mt-1">
-                            事業内容</dt>
-                        <dd class="w-full md:w-2/3 text-gray-800 leading-relaxed">
-                            <ul class="list-disc list-inside space-y-2">
-                                <li>総合型選抜専門塾「LIGHTHOUSE」の運営</li>
-                                <li>教育コンテンツの作成</li>
-                                <li>探究授業・学習支援 運営サポート</li>
-                                <li>学習管理システム「Classnavi」の開発・運営</li>
+                </div>
+
+                <!-- 展開: システム開発 -->
+                <div class="biz-row reveal">
+                    <span class="biz-role tate">展開</span>
+                    <h3 class="biz-name">
+                        システム開発
+                        <span class="biz-en">Education Systems</span>
+                    </h3>
+                    <div class="biz-desc">
+                        <p>
+                            教育現場の運営負荷を下げ、先生や講師が生徒と向き合う時間を増やすための仕組みをつくります。
+                        </p>
+                        <div class="biz-item">
+                            <div class="biz-item-name">
+                                <a href="https://classnavi.p-quest.com/" target="_blank" rel="noopener noreferrer" style="border-bottom:1px solid var(--rule-strong);">ClassNavi</a>
+                                <span class="tag">実践検証中</span>
+                            </div>
+                            <p>学校・塾向けの運営支援システム。自社の教育現場で実践導入し、検証しながら改善しています。</p>
+                        </div>
+                        <div class="biz-item">
+                            <div class="biz-item-name">
+                                Scholar Compass
+                                <span class="tag gray">設計中</span>
+                            </div>
+                            <p>生徒一人ひとりの学習状況・探究の進捗・面談内容を整理し、伴走支援の質を高める進捗管理システム。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 補助線: 企業支援 / 制作支援 -->
+                <div class="biz-row reveal" style="border-bottom:1px solid var(--rule);">
+                    <span class="biz-role tate sub">補助線</span>
+                    <div class="biz-pair" style="grid-column: 2 / -1;">
+                        <div class="biz-item">
+                            <div class="biz-item-name">企業支援</div>
+                            <p>
+                                教育現場で培った、問いを立てる力・言葉にする力・仕組みを整える力を、企業や地域事業者の課題整理に応用します。業務改善、仕組み化、採用支援、研修設計、必要に応じたAI活用支援。
+                            </p>
+                        </div>
+                        <div class="biz-item">
+                            <div class="biz-item-name">制作支援 <span class="tag gray">別ブランドとして設計中</span></div>
+                            <p>
+                                誰に、何を、なぜ伝えるのかを整理したうえで、Web、LP、動画、資料へ落とし込みます。言語化した価値を「伝わる形」にする支援です。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 四、実績 -->
+        <section id="results" class="block">
+            <div class="wrap">
+                <div class="sec-head reveal">
+                    <span class="sec-num" aria-hidden="true">四</span>
+                    <div>
+                        <span class="sec-label en">Results</span>
+                        <h2 class="sec-title">現場の実績</h2>
+                    </div>
+                </div>
+
+                <div class="stats reveal">
+                    <div class="stat">
+                        <p class="stat-num">84<small>/94件</small></p>
+                        <p class="stat-label">総合型選抜の合格支援(2022〜2026)</p>
+                    </div>
+                    <div class="stat">
+                        <p class="stat-num">6<small>年連続</small></p>
+                        <p class="stat-label">慶應義塾大学SFC 合格者を輩出</p>
+                    </div>
+                    <div class="stat">
+                        <p class="stat-num">4.93</p>
+                        <p class="stat-label">外部口コミ評価(83件)</p>
+                    </div>
+                    <div class="stat">
+                        <p class="stat-num">250<small>名</small></p>
+                        <p class="stat-label">規模の教育現場を運営・授業設計</p>
+                    </div>
+                    <div class="stat">
+                        <p class="stat-num">40<small>名</small></p>
+                        <p class="stat-label">大学生チューター組織の育成・マネジメント</p>
+                    </div>
+                    <div class="stat">
+                        <p class="stat-num">160<small>人</small></p>
+                        <p class="stat-label">規模の探究授業を企画・実施</p>
+                    </div>
+                </div>
+
+                <p class="stats-note reveal">
+                    早慶、国公立、海外大学まで幅広く対応。公営塾、個人塾、学校外部組織など、複数の教育現場での指導・運営・マネジメント経験をもとに支援しています。
+                </p>
+            </div>
+        </section>
+
+        <!-- 五、相談 -->
+        <section id="consulting" class="block">
+            <div class="wrap">
+                <div class="sec-head reveal">
+                    <span class="sec-num" aria-hidden="true">五</span>
+                    <div>
+                        <span class="sec-label en">Consulting</span>
+                        <h2 class="sec-title">こんな相談ができます。</h2>
+                    </div>
+                </div>
+
+                <div class="consult-grid">
+                    <div class="consult-group reveal">
+                        <h3>学校関係者の方</h3>
+                        <ul>
+                            <li>探究授業を設計したい、問いを立てる授業をつくりたい</li>
+                            <li>キャリア教育を外部講師と連携して行いたい</li>
+                            <li>総合型選抜や進路指導を強化したい</li>
+                            <li>探究と教科学習を接続し、生徒の内的動機づけを高めたい</li>
+                            <li>学校や塾の運営管理を仕組み化したい</li>
+                        </ul>
+                    </div>
+                    <div class="consult-group reveal">
+                        <h3>保護者の方</h3>
+                        <ul>
+                            <li>子どもの進路について相談したい</li>
+                            <li>総合型選抜について知りたい、志望理由書や面接対策を相談したい</li>
+                            <li>子どもの考えや強みを整理したい</li>
+                            <li>探究活動や課外活動を進路につなげたい</li>
+                            <li>勉強だけでなく、将来の選択について伴走してほしい</li>
+                        </ul>
+                    </div>
+                    <div class="consult-group reveal">
+                        <h3>協業をお考えの方</h3>
+                        <ul>
+                            <li>教育事業で連携したい、地域教育の取り組みをつくりたい</li>
+                            <li>探究学習やキャリア教育のプログラムを共同開発したい</li>
+                            <li>教育現場の課題を仕組みで解決したい</li>
+                            <li>ClassNaviのモデル導入や検証に関心がある</li>
+                            <li>Webや動画を使って教育や地域の価値を伝えたい</li>
+                        </ul>
+                    </div>
+                    <div class="consult-group reveal">
+                        <h3>企業・地域事業者の方</h3>
+                        <ul>
+                            <li>業務を効率化したい、必要に応じてAIやシステムを活用したい</li>
+                            <li>採用や広報の言葉を整理したい</li>
+                            <li>WebやLPを制作したい、動画や資料で価値を伝えたい</li>
+                            <li>事業の方向性を言語化したい</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 六、会社 -->
+        <section id="company" class="block">
+            <div class="wrap">
+                <div class="sec-head reveal">
+                    <span class="sec-num" aria-hidden="true">六</span>
+                    <div>
+                        <span class="sec-label en">Company</span>
+                        <h2 class="sec-title">会社概要</h2>
+                    </div>
+                </div>
+
+                <div class="founder reveal">
+                    <figure class="founder-photo">
+                        <img src="./profile.jpg" alt="代表取締役 田邊勇人の写真">
+                        <figcaption class="en">Founder / CEO</figcaption>
+                    </figure>
+                    <div>
+                        <h3 class="founder-name">田邊 勇人</h3>
+                        <p class="founder-role en">Yuto Tanabe — Representative Director</p>
+                        <div class="founder-bio">
+                            <p>
+                                公営塾、個人塾、学校外部組織など複数の教育現場で、指導、授業設計、運営、マネジメントを経験。生徒約250名・大学生チューター約40名規模の教育現場の運営を担い、160人規模の探究授業を企画・実施。
+                            </p>
+                            <p>
+                                生徒の想いや関心を大切にしながら、それを学問、研究、仕事、社会との接点まで深めることを重視。まだ整理されていない問いや課題を言葉にし、授業、資料、Web、動画、仕組みへ変えることを続けている。
+                            </p>
+                            <p>
+                                公式note<a href="https://note.com/veintiuno" target="_blank" rel="noopener noreferrer">「ちーず｜note」</a>では、教育や自己探究、人生の構造化に関する知見を発信中。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <dl class="company-table reveal">
+                    <div class="row">
+                        <dt class="en">Name</dt>
+                        <dd>株式会社PIVOT＆QUEST（PIVOT & QUEST Inc.）</dd>
+                    </div>
+                    <div class="row">
+                        <dt class="en">Representative</dt>
+                        <dd>代表取締役　田邊 勇人</dd>
+                    </div>
+                    <div class="row">
+                        <dt class="en">Address</dt>
+                        <dd>茨城県つくば市谷田部1144-392</dd>
+                    </div>
+                    <div class="row">
+                        <dt class="en">Business</dt>
+                        <dd>
+                            <ul>
+                                <li>教育支援（総合型選抜対策専門塾「Lighthouse」の運営）</li>
+                                <li>学校支援（探究授業設計・キャリア教育・教育プログラム開発）</li>
+                                <li>企業支援（業務改善・仕組み化・研修設計）</li>
+                                <li>制作支援（Web・LP・動画・資料制作）</li>
+                                <li>システム開発（「ClassNavi」等の開発・運営）</li>
                                 <li>上記に関わる一切の業務</li>
                             </ul>
                         </dd>
                     </div>
-                    <div class="py-6 flex flex-col md:flex-row md:items-start">
-                        <dt
-                            class="w-full md:w-1/3 font-bold text-gray-400 mb-2 md:mb-0 uppercase tracking-widest text-xs mt-1">
-                            お問い合わせ</dt>
-                        <dd class="w-full md:w-2/3 text-gray-800 font-semibold">
-                            <a href="https://forms.gle/o3NBaoy7CoT4KCFY7" target="_blank" rel="noopener noreferrer"
-                                class="text-brand-accent hover:underline">お問い合わせフォーム</a> / <a href="https://lin.ee/brTdUGs" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:underline">公式LINE</a> / <a href="mailto:info@p-quest.com" class="text-brand-accent hover:underline">info@p-quest.com</a>
+                    <div class="row">
+                        <dt class="en">Contact</dt>
+                        <dd>
+                            <a href="https://forms.gle/o3NBaoy7CoT4KCFY7" target="_blank" rel="noopener noreferrer">お問い合わせフォーム</a>
+                            ／ <a href="https://lin.ee/brTdUGs" target="_blank" rel="noopener noreferrer">公式LINE</a>
+                            ／ <a href="mailto:info@p-quest.com">info@p-quest.com</a>
                         </dd>
                     </div>
                 </dl>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- 結び -->
+        <section id="contact" class="closing">
+            <div class="wrap reveal">
+                <h2 class="closing-title">まずは、<wbr>話すことから。</h2>
+                <p class="closing-lead">
+                    進路のこと、探究授業のこと、教育現場の仕組みのこと。<br>
+                    まだ整理されていない段階のご相談こそ、歓迎します。
+                </p>
+                <div class="closing-actions">
+                    <a href="https://forms.gle/o3NBaoy7CoT4KCFY7" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                        お問い合わせ
+                        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16m0 0l-6-6m6 6l-6 6" />
+                        </svg>
+                    </a>
+                    <a href="https://lin.ee/brTdUGs" target="_blank" rel="noopener noreferrer" class="btn-quiet">公式LINEで相談する</a>
+                </div>
+                <div class="seal closing-seal" aria-hidden="true">問</div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="border-t border-gray-100 py-12 px-6 text-center text-sm text-gray-500 bg-white">
-        <div class="flex justify-center space-x-6 mb-8 uppercase tracking-widest text-xs font-semibold">
-            <a href="./privacy-policy.html" class="hover:text-brand-accent transition-colors">Privacy Policy</a>
-            <a href="./terms.html" class="hover:text-brand-accent transition-colors">Terms of Service</a>
-            <a href="https://note.com/veintiuno" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent transition-colors">公式note</a>
-            <a href="https://lin.ee/brTdUGs" target="_blank" class="hover:text-brand-accent transition-colors">公式LINE</a>
-            <a href="https://forms.gle/o3NBaoy7CoT4KCFY7" target="_blank"
-                class="hover:text-brand-accent transition-colors">Contact</a>
+    <footer>
+        <div class="wrap footer-inner">
+            <div class="footer-links">
+                <a href="./privacy-policy.html">プライバシーポリシー</a>
+                <a href="./terms.html">サイト利用規約</a>
+                <a href="https://note.com/veintiuno" target="_blank" rel="noopener noreferrer">公式note</a>
+                <a href="https://lin.ee/brTdUGs" target="_blank" rel="noopener noreferrer">公式LINE</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 PIVOT & QUEST Inc. All Rights Reserved.</p>
         </div>
-        <p>&copy; 2026 PIVOT & QUEST Inc. All Rights Reserved.</p>
     </footer>
 
-    <!-- Intersection Observer Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // ヒーロー登場(縦書きワイプ→朱印)
+            requestAnimationFrame(() => document.body.classList.add('loaded'));
+
+            // スクロールリビール
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
                     }
                 });
-            }, {
-                threshold: 0.1,
-                rootMargin: "0px 0px -50px 0px"
-            });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-            document.querySelectorAll('.observer-target').forEach(el => observer.observe(el));
-
-            // Initial trigger for hero
-            setTimeout(() => {
-                document.querySelectorAll('.fade-in-up')[0].classList.add('visible');
-            }, 100);
-
-            // Mobile menu toggle (再クリック/リンク選択で閉じる)
+            // モバイルメニュー(トグル: 再タップ/リンク選択で閉じる)
             const menuToggle = document.getElementById('menu-toggle');
             const mobileMenu = document.getElementById('mobile-menu');
             const iconOpen = document.getElementById('menu-icon-open');
             const iconClose = document.getElementById('menu-icon-close');
             const setMenu = (open) => {
-                mobileMenu.classList.toggle('hidden', !open);
-                iconOpen.classList.toggle('hidden', open);
-                iconClose.classList.toggle('hidden', !open);
+                mobileMenu.classList.toggle('open', open);
+                iconOpen.style.display = open ? 'none' : 'block';
+                iconClose.style.display = open ? 'block' : 'none';
                 menuToggle.setAttribute('aria-expanded', String(open));
             };
-            menuToggle.addEventListener('click', () => {
-                setMenu(mobileMenu.classList.contains('hidden'));
-            });
+            menuToggle.addEventListener('click', () => setMenu(!mobileMenu.classList.contains('open')));
             mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
         });
     </script>
