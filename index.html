@@ -23,7 +23,7 @@
       "legalName": "株式会社PIVOT＆QUEST",
       "email": "info@p-quest.com",
       "url": "https://p-quest.com/",
-      "logo": "https://p-quest.com/profile.jpg",
+      "logo": "https://p-quest.com/logo.png",
       "description": "教育を起点に、問いを言葉にし、学びを進路や社会との接点につなげる会社。総合型選抜対策専門塾Lighthouseの運営を中心に、探究授業・キャリア教育などの学校支援、企業支援、制作支援、ClassNavi等のシステム開発まで横断して支援。",
       "founder": {
         "@type": "Person",
@@ -166,6 +166,14 @@
             font-weight: 600;
             font-size: 15px;
             letter-spacing: 0.24em;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-mark {
+            height: 32px;
+            width: auto;
         }
 
         .nav-links {
@@ -308,7 +316,7 @@
         }
 
         .hero-lead {
-            font-size: 14px;
+            font-size: 15px;
             line-height: 2.3;
             color: var(--ink);
         }
@@ -330,26 +338,23 @@
             border-color: var(--shu);
         }
 
-        /* 朱印 */
-        .seal {
-            width: 58px;
-            height: 58px;
-            background: var(--shu);
-            color: #fff;
-            font-family: 'Shippori Mincho', serif;
-            font-weight: 700;
-            font-size: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 3px;
-            transform: rotate(-3deg);
-            box-shadow: 0 1px 0 rgba(28, 26, 23, 0.1);
-            user-select: none;
+        /* ロゴマーク(ペンギン): 縮小のみ・拡大禁止(原寸 208x453) */
+        .hero-mark {
+            height: clamp(120px, 18vh, 190px);
+            width: auto;
+            align-self: flex-end;
         }
 
-        .hero-seal {
-            align-self: flex-start;
+        .closing-mark {
+            height: 110px;
+            width: auto;
+            margin: 72px auto 0;
+            display: block;
+        }
+
+        .footer-mark {
+            height: 44px;
+            width: auto;
         }
 
         @media (max-width: 767px) {
@@ -399,13 +404,13 @@
 
         .stamp {
             opacity: 0;
-            transform: rotate(-3deg) scale(1.25);
-            transition: opacity 0.35s ease-out 1.15s, transform 0.35s cubic-bezier(0.3, 1.4, 0.5, 1) 1.15s;
+            transform: translateY(10px);
+            transition: opacity 0.7s ease-out 1.1s, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.1s;
         }
 
         .loaded .stamp {
             opacity: 1;
-            transform: rotate(-3deg) scale(1);
+            transform: translateY(0);
         }
 
         .fade {
@@ -445,6 +450,17 @@
             margin-bottom: 64px;
         }
 
+        @media (max-width: 767px) {
+            section.block {
+                padding: 72px 0;
+            }
+
+            .sec-head {
+                gap: 20px;
+                margin-bottom: 44px;
+            }
+        }
+
         .sec-num {
             font-family: 'Shippori Mincho', serif;
             font-size: 30px;
@@ -466,6 +482,7 @@
             font-size: clamp(26px, 4.2vw, 40px);
             line-height: 1.7;
             letter-spacing: 0.06em;
+            word-break: keep-all;
         }
 
         /* ---------- 一、理念 ---------- */
@@ -583,15 +600,21 @@
             max-width: 640px;
             margin: 0 auto;
             text-align: center;
-            font-size: 14px;
+            font-size: 15px;
             color: var(--gray);
+        }
+
+        @media (max-width: 767px) {
+            .chain-note {
+                text-align: left;
+            }
         }
 
         /* ---------- 三、事業展開(目次型) ---------- */
         .biz-row {
             display: grid;
-            grid-template-columns: 56px 1fr;
-            gap: 24px;
+            grid-template-columns: 44px 1fr;
+            gap: 20px;
             padding: 52px 0;
             border-top: 1px solid var(--rule);
         }
@@ -637,7 +660,7 @@
         }
 
         .biz-desc {
-            font-size: 14px;
+            font-size: 15px;
             color: var(--ink);
         }
 
@@ -708,7 +731,7 @@
         }
 
         .biz-item p {
-            font-size: 13px;
+            font-size: 14px;
             color: var(--gray);
             margin-top: 6px;
         }
@@ -751,6 +774,12 @@
             padding: 44px 28px 40px;
         }
 
+        @media (max-width: 767px) {
+            .stat {
+                padding: 30px 18px 28px;
+            }
+        }
+
         .stat-num {
             font-family: 'Shippori Mincho', serif;
             font-weight: 600;
@@ -767,7 +796,7 @@
         }
 
         .stat-label {
-            font-size: 12px;
+            font-size: 13px;
             color: var(--gray);
             margin-top: 14px;
             line-height: 1.9;
@@ -808,7 +837,7 @@
 
         .consult-group li {
             list-style: none;
-            font-size: 14px;
+            font-size: 15px;
             color: var(--ink);
             padding-left: 20px;
             position: relative;
@@ -870,7 +899,7 @@
         }
 
         .founder-bio {
-            font-size: 14px;
+            font-size: 15px;
             color: var(--ink);
         }
 
@@ -954,10 +983,16 @@
         }
 
         .closing-lead {
-            font-size: 14px;
+            font-size: 15px;
             color: var(--gray);
             margin: 32px auto 56px;
             max-width: 520px;
+        }
+
+        @media (max-width: 767px) {
+            .closing {
+                padding: 96px 0 104px;
+            }
         }
 
         .closing-actions {
@@ -1063,10 +1098,6 @@
                 transform: none !important;
             }
 
-            .stamp {
-                transform: rotate(-3deg) !important;
-            }
-
             .core-circle path {
                 stroke-dashoffset: 0 !important;
                 transition: none !important;
@@ -1088,7 +1119,10 @@
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-inner">
-            <a href="#" class="nav-logo">PIVOT & QUEST</a>
+            <a href="#" class="nav-logo">
+                <img src="./logo.png" alt="" class="nav-mark">
+                <span>PIVOT & QUEST</span>
+            </a>
             <div class="nav-links">
                 <a href="#philosophy">理念</a>
                 <a href="#structure">構造</a>
@@ -1122,7 +1156,7 @@
     <header class="hero">
         <div class="wrap hero-grid">
             <div class="hero-side">
-                <p class="hero-eyebrow en fade">Pivot & Quest Inc. — Education / Language / Structure</p>
+                <p class="hero-eyebrow en fade">Pivot & Quest Inc.</p>
                 <p class="hero-lead fade">
                     株式会社PIVOT&QUESTは、教育を起点に、問いを言葉にし、学びを進路や社会との接点につなげる会社です。
                 </p>
@@ -1139,7 +1173,7 @@
                     <span class="wipe d1">言葉を未来へ。</span>
                 </h1>
                 <p class="hero-sub tate wipe d2">問いを起点に、選択と行動をつくる。</p>
-                <div class="seal hero-seal stamp" aria-hidden="true" style="align-self: flex-end;">問</div>
+                <img src="./logo.png" alt="" class="hero-mark stamp" aria-hidden="true">
             </div>
         </div>
     </header>
@@ -1499,7 +1533,7 @@
                     </a>
                     <a href="https://lin.ee/brTdUGs" target="_blank" rel="noopener noreferrer" class="btn-quiet">公式LINEで相談する</a>
                 </div>
-                <div class="seal closing-seal" aria-hidden="true">問</div>
+                <img src="./logo.png" alt="" class="closing-mark" aria-hidden="true">
             </div>
         </section>
     </main>
@@ -1507,13 +1541,16 @@
     <!-- Footer -->
     <footer>
         <div class="wrap footer-inner">
+            <div style="display:flex; align-items:center; gap:16px;">
+                <img src="./logo.png" alt="" class="footer-mark">
+                <p class="footer-copy">&copy; 2026 PIVOT & QUEST Inc.<br>All Rights Reserved.</p>
+            </div>
             <div class="footer-links">
                 <a href="./privacy-policy.html">プライバシーポリシー</a>
                 <a href="./terms.html">サイト利用規約</a>
                 <a href="https://note.com/veintiuno" target="_blank" rel="noopener noreferrer">公式note</a>
                 <a href="https://lin.ee/brTdUGs" target="_blank" rel="noopener noreferrer">公式LINE</a>
             </div>
-            <p class="footer-copy">&copy; 2026 PIVOT & QUEST Inc. All Rights Reserved.</p>
         </div>
     </footer>
 
