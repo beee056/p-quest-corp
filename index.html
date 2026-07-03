@@ -69,9 +69,10 @@
 
     <style>
         :root {
-            --paper: #F6F4EF;
+            /* 名刺(PnQブランド)基準: クリーム地 + オレンジ #f15a16 */
+            --paper: #F7F4E9;
             --ink: #1C1A17;
-            --shu: #E55F3A;
+            --shu: #EA5514;
             --gray: #6E6A63;
             --rule: rgba(28, 26, 23, 0.14);
             --rule-strong: rgba(28, 26, 23, 0.55);
@@ -274,19 +275,23 @@
             gap: 40px;
         }
 
+        .hero-grid {
+            width: 100%;
+        }
+
         /* 縦書き: row-reverse で DOM順=読み順(右→左)にする */
         .hero-headline {
             display: flex;
             flex-direction: row-reverse;
             justify-content: flex-start;
-            gap: clamp(18px, 3vw, 48px);
+            gap: clamp(20px, 2.4vw, 40px);
         }
 
         .hero-headline h1 {
             font-family: 'Shippori Mincho', serif;
             font-weight: 600;
             font-size: clamp(40px, 9.5vh, 92px);
-            line-height: 1.62;
+            line-height: 1.42;
             letter-spacing: 0.14em;
         }
 
@@ -340,16 +345,10 @@
 
         /* ロゴマーク(ペンギン): 縮小のみ・拡大禁止(原寸 208x453) */
         .hero-mark {
-            height: clamp(120px, 18vh, 190px);
+            height: clamp(130px, 20vh, 200px);
             width: auto;
-            align-self: flex-end;
-        }
-
-        .closing-mark {
-            height: 110px;
-            width: auto;
-            margin: 72px auto 0;
-            display: block;
+            align-self: flex-start;
+            margin-top: 20px;
         }
 
         .footer-mark {
@@ -381,6 +380,11 @@
 
             .hero-side {
                 max-width: none;
+            }
+
+            .hero-mark {
+                height: 110px;
+                margin-top: 12px;
             }
         }
 
@@ -613,31 +617,17 @@
         /* ---------- 三、事業展開(目次型) ---------- */
         .biz-row {
             display: grid;
-            grid-template-columns: 44px 1fr;
-            gap: 20px;
+            grid-template-columns: 1fr;
+            gap: 24px;
             padding: 52px 0;
             border-top: 1px solid var(--rule);
         }
 
         @media (min-width: 900px) {
             .biz-row {
-                grid-template-columns: 72px 5fr 6fr;
-                gap: 48px;
+                grid-template-columns: 5fr 7fr;
+                gap: 64px;
             }
-        }
-
-        .biz-role {
-            font-family: 'Shippori Mincho', serif;
-            font-size: 13px;
-            letter-spacing: 0.34em;
-            color: var(--shu);
-            writing-mode: vertical-rl;
-            height: fit-content;
-            padding-top: 8px;
-        }
-
-        .biz-role.sub {
-            color: var(--gray);
         }
 
         .biz-name {
@@ -664,11 +654,6 @@
             color: var(--ink);
         }
 
-        @media (max-width: 899px) {
-            .biz-desc {
-                grid-column: 2;
-            }
-        }
 
         .biz-desc p {
             margin-bottom: 1.6em;
@@ -1166,6 +1151,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m0 0l6-6m-6 6l-6-6" />
                     </svg>
                 </a>
+                <img src="./logo.png" alt="" class="hero-mark stamp" aria-hidden="true">
             </div>
             <div class="hero-headline">
                 <h1 class="tate">
@@ -1173,7 +1159,6 @@
                     <span class="wipe d1">言葉を未来へ。</span>
                 </h1>
                 <p class="hero-sub tate wipe d2">問いを起点に、選択と行動をつくる。</p>
-                <img src="./logo.png" alt="" class="hero-mark stamp" aria-hidden="true">
             </div>
         </div>
     </header>
@@ -1259,9 +1244,8 @@
                     </div>
                 </div>
 
-                <!-- 中核: 教育支援 -->
+                <!-- 教育支援 -->
                 <div class="biz-row reveal">
-                    <span class="biz-role tate">中核事業</span>
                     <h3 class="biz-name">
                         教育支援
                         <span class="biz-en">Lighthouse — 総合型選抜対策専門塾</span>
@@ -1280,9 +1264,8 @@
                     </div>
                 </div>
 
-                <!-- 展開: 学校支援 -->
+                <!-- 学校支援 -->
                 <div class="biz-row reveal">
-                    <span class="biz-role tate">展開</span>
                     <h3 class="biz-name">
                         学校支援
                         <span class="biz-en">Inquiry / Career Education</span>
@@ -1297,9 +1280,8 @@
                     </div>
                 </div>
 
-                <!-- 展開: システム開発 -->
+                <!-- システム開発 -->
                 <div class="biz-row reveal">
-                    <span class="biz-role tate">展開</span>
                     <h3 class="biz-name">
                         システム開発
                         <span class="biz-en">Education Systems</span>
@@ -1325,10 +1307,9 @@
                     </div>
                 </div>
 
-                <!-- 補助線: 企業支援 / 制作支援 -->
+                <!-- 企業支援 / 制作支援 -->
                 <div class="biz-row reveal" style="border-bottom:1px solid var(--rule);">
-                    <span class="biz-role tate sub">補助線</span>
-                    <div class="biz-pair" style="grid-column: 2 / -1;">
+                    <div class="biz-pair" style="grid-column: 1 / -1;">
                         <div class="biz-item">
                             <div class="biz-item-name">企業支援</div>
                             <p>
@@ -1336,7 +1317,7 @@
                             </p>
                         </div>
                         <div class="biz-item">
-                            <div class="biz-item-name">制作支援 <span class="tag gray">別ブランドとして設計中</span></div>
+                            <div class="biz-item-name">制作支援 <span class="tag gray">準備中</span></div>
                             <p>
                                 誰に、何を、なぜ伝えるのかを整理したうえで、Web、LP、動画、資料へ落とし込みます。言語化した価値を「伝わる形」にする支援です。
                             </p>
@@ -1533,7 +1514,6 @@
                     </a>
                     <a href="https://lin.ee/brTdUGs" target="_blank" rel="noopener noreferrer" class="btn-quiet">公式LINEで相談する</a>
                 </div>
-                <img src="./logo.png" alt="" class="closing-mark" aria-hidden="true">
             </div>
         </section>
     </main>
