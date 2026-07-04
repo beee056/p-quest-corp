@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>進路探究マップ 詳細版｜領域を、もう一段掘る | 株式会社PIVOT&QUEST</title>
+    <meta name="description" content="興味から立てた「問い」を、学問分野・学部・仕事の例、そして実際にその領域で問いを深めた先輩の声まで掘り下げる——PIVOT&QUEST独自の進路探究マップ詳細版。">
+    <link rel="canonical" href="https://p-quest.com/shinro-map-detail">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="進路探究マップ 詳細版｜PIVOT&QUEST">
+    <meta property="og:description" content="問いを、学問・学部・仕事の例と、先輩の声まで掘り下げる進路探究マップ詳細版。">
+    <meta property="og:url" content="https://p-quest.com/shinro-map-detail">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --paper: #F7F3E5; --white: #FFFFFF; --ink: #2B2723;
+            --purple: #4D227F; --purple-soft: #F0EAF6;
+            --orange: #EE6223; --orange-soft: #FDEDE4;
+            --gray: #8D8A80; --rule: rgba(43, 39, 35, 0.12);
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'YakuHanJP', 'Zen Kaku Gothic New', sans-serif; background: var(--paper); color: var(--ink); line-height: 1.9; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        .wrap { width: min(1040px, 90vw); margin: 0 auto; }
+        .slab { font-family: 'Zilla Slab', serif; }
+
+        .nav { position: sticky; top: 0; z-index: 50; background: rgba(247,243,229,0.9); backdrop-filter: blur(10px); border-bottom: 1px solid var(--rule); }
+        .nav-inner { width: min(1040px, 90vw); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+        .nav-logo { display: flex; align-items: center; gap: 12px; font-weight: 900; letter-spacing: 0.08em; }
+        .nav-mark { height: 34px; width: auto; }
+        .nav-links { display: flex; align-items: center; gap: 22px; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; }
+        .nav-links a:hover { color: var(--purple); }
+        @media (max-width: 640px) { .nav-links a.hide-sp { display: none; } }
+
+        .hero { padding: 68px 0 30px; }
+        .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: 'Zilla Slab', serif; font-weight: 600; font-size: 13px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--orange); margin-bottom: 16px; }
+        .eyebrow::before { content: ""; width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; border-bottom: 10px solid var(--orange); transform: rotate(90deg); }
+        .hero h1 { font-weight: 900; font-size: clamp(27px, 4.6vw, 46px); line-height: 1.45; letter-spacing: 0.03em; word-break: keep-all; margin-bottom: 18px; }
+        .hero h1 .accent { color: var(--purple); }
+        .hero-lead { max-width: 720px; font-size: 16px; color: #4b4640; }
+
+        .depth { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
+        .depth span { background: var(--white); border: 1px solid var(--rule); border-radius: 999px; padding: 8px 16px; font-size: 12.5px; font-weight: 700; }
+        .depth b { color: var(--orange); }
+
+        .jump { display: flex; gap: 10px; flex-wrap: wrap; margin: 26px 0 8px; }
+        .jump a { font-size: 12.5px; font-weight: 700; color: var(--purple); background: var(--purple-soft); border-radius: 999px; padding: 8px 16px; }
+
+        main { padding-bottom: 70px; }
+        .domain { margin-top: 40px; scroll-margin-top: 76px; }
+        .domain-title { display: flex; align-items: baseline; gap: 14px; padding-bottom: 12px; border-bottom: 3px solid; margin-bottom: 8px; }
+        .domain-title .jp { font-weight: 900; font-size: 22px; letter-spacing: 0.04em; }
+        .domain-title .en { font-family: 'Zilla Slab', serif; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gray); }
+        .domain.d1 .domain-title { border-color: var(--purple); }
+        .domain.d2 .domain-title { border-color: #2f855a; }
+        .domain.d3 .domain-title { border-color: var(--orange); }
+        .domain.d4 .domain-title { border-color: #2b6cb0; }
+        .domain-intro { font-size: 14px; color: #4b4640; margin-bottom: 18px; }
+
+        .thread { background: var(--white); border: 1px solid var(--rule); border-radius: 16px; padding: 22px 24px; margin-bottom: 14px; box-shadow: 0 4px 16px rgba(77,34,127,0.04); }
+        .thread .q { font-weight: 900; font-size: 16px; color: var(--purple); margin-bottom: 12px; }
+        .thread .q::before { content: "問い　"; font-size: 11px; font-weight: 700; color: var(--gray); letter-spacing: 0.1em; display: inline-block; margin-right: 6px; vertical-align: middle; }
+        .chain { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+        @media (max-width: 720px) { .chain { grid-template-columns: 1fr; gap: 8px; } }
+        .chain .col { }
+        .chain .lbl { font-size: 11px; font-weight: 700; color: var(--gray); letter-spacing: 0.06em; margin-bottom: 4px; }
+        .chain .val { font-size: 13.5px; line-height: 1.6; }
+        .chain .col.field .val { font-weight: 700; }
+        .chain .col.job .val { font-weight: 800; color: var(--orange); }
+
+        .voice { margin-top: 8px; margin-bottom: 4px; background: var(--purple-soft); border-radius: 16px; padding: 20px 24px; }
+        .voice .vh { font-size: 12px; font-weight: 700; color: var(--purple); letter-spacing: 0.06em; margin-bottom: 8px; }
+        .voice .vh b { color: var(--ink); }
+        .voice p { font-size: 14px; color: #3f3a34; line-height: 1.85; }
+
+        .note { font-size: 12px; color: var(--gray); margin-top: 34px; line-height: 1.9; }
+
+        .cta { background: var(--purple); color: #fff; border-radius: 22px; padding: 48px 36px; text-align: center; margin-top: 48px; }
+        .cta h2 { font-weight: 900; font-size: clamp(22px, 3.4vw, 32px); margin-bottom: 12px; }
+        .cta p { color: rgba(255,255,255,0.85); font-size: 15px; margin-bottom: 26px; }
+        .btn { display: inline-flex; align-items: center; gap: 12px; background: var(--orange); color: #fff; font-weight: 700; font-size: 14px; letter-spacing: 0.12em; padding: 15px 34px; border-radius: 10px; transition: background 0.25s, transform 0.25s; }
+        .btn:hover { background: #fff; color: var(--purple); transform: translateY(-2px); }
+
+        footer { padding: 40px 0 52px; border-top: 1px solid var(--rule); }
+        .footer-inner { display: flex; flex-direction: column; gap: 20px; align-items: center; text-align: center; }
+        @media (min-width: 768px) { .footer-inner { flex-direction: row; justify-content: space-between; text-align: left; } }
+        .footer-brand { display: flex; align-items: center; gap: 16px; }
+        .footer-mark { height: 40px; width: auto; }
+        .footer-copy { font-size: 11px; color: var(--gray); letter-spacing: 0.08em; line-height: 1.8; }
+        .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; color: var(--gray); }
+        .footer-links a:hover { color: var(--purple); }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="./index.html" class="nav-logo"><img src="./logo.png" alt="" class="nav-mark"><span>PIVOT & QUEST</span></a>
+            <div class="nav-links">
+                <a href="./shinro-map.html" class="hide-sp">一覧版マップ</a>
+                <a href="./for-schools.html">学校の方へ</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="wrap">
+            <p class="eyebrow">Inquiry Map — Detail</p>
+            <h1>領域を、<br><span class="accent">もう一段掘る</span>。</h1>
+            <p class="hero-lead">一覧版で見つけた「問い」を、ここでは<strong>学問分野・学部の例・仕事の例</strong>、そして実際にその領域で<strong>問いを深めた先輩の声</strong>まで掘り下げます。進路は「学部名を選ぶ」ことではなく、「問いを深める場所を選ぶ」こと。その手触りを掴むための地図です。</p>
+            <div class="depth">
+                <span><b>探究</b>スタート：経験を棚卸しし、問いを立てる</span>
+                <span><b>接続</b>：問いを学問・社会へつなぐ</span>
+                <span><b>実践</b>：大学・その先で問いを深める</span>
+            </div>
+            <div class="jump">
+                <a href="#d1">言葉・歴史・文化</a>
+                <a href="#d2">社会・経済・政治</a>
+                <a href="#d3">ヒト・生命・医療</a>
+                <a href="#d4">モノ・自然・法則</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <!-- 言葉・歴史・文化 -->
+        <section class="domain d1" id="d1">
+            <div class="domain-title"><span class="jp">言葉・歴史・文化</span><span class="en">Language / Culture</span></div>
+            <p class="domain-intro">言葉・物語・歴史・表現に心が動く人へ。「人が意味をつくる仕組み」を問う領域です。</p>
+            <div class="thread">
+                <div class="q">人はなぜ、言葉で世界を捉えるのか？</div>
+                <div class="chain">
+                    <div class="col field"><div class="lbl">学問分野</div><div class="val">言語学・文学・哲学・歴史学</div></div>
+                    <div class="col"><div class="lbl">学部の例</div><div class="val">文学部／人文学部／外国語学部</div></div>
+                    <div class="col job"><div class="lbl">仕事の例</div><div class="val">編集者・翻訳・研究者・教員・日本語教師</div></div>
+                </div>
+            </div>
+            <div class="thread">
+                <div class="q">「伝わる表現」は、どう生まれるのか？</div>
+                <div class="chain">
+                    <div class="col field"><div class="lbl">学問分野</div><div class="val">芸術・デザイン・メディア論</div></div>
+                    <div class="col"><div class="lbl">学部の例</div><div class="val">芸術学部／情報デザイン／文化構想</div></div>
+                    <div class="col job"><div class="lbl">仕事の例</div><div class="val">クリエイター・編集・広告・映像制作</div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 社会・経済・政治 -->
+        <section class="domain d2" id="d2">
+            <div class="domain-title"><span class="jp">社会・経済・政治</span><span class="en">Society / Economy</span></div>
+            <p class="domain-intro">身近な不公平や、社会・経済の動きが気になる人へ。「人が共に生きる仕組み」を問う領域です。</p>
+            <div class="thread">
+                <div class="q">「良い社会」の仕組みは、どう作れるか？</div>
+                <div class="chain">
+                    <div class="col field"><div class="lbl">学問分野</div><div class="val">法学・政治学・社会学</div></div>
+                    <div class="col"><div class="lbl">学部の例</div><div class="val">法学部／政治学部／社会学部／総合政策</div></div>
+                    <div class="col job"><div class="lbl">仕事の例</div><div class="val">公務員・法律家・政策・NPO・まちづくり</div></div>
+                </div>
+            </div>
+            <div class="thread">
+                <div class="q">人や企業は、なぜその選択をするのか？</div>
+                <div class="chain">
+                    <div class="col field"><div class="lbl">学問分野</div><div class="val">経済学・経営学・商学</div></div>
+                    <div class="col"><div class="lbl">学部の例</div><div class="val">経済学部／商学部／経営学部</div></div>
+                    <div class="col job"><div class="lbl">仕事の例</div><div class="val">金融・経営・マーケティング・コンサル</div></div>
+                </div>
+            </div>
+            <div class="voice">
+                <div class="vh">この領域で問いを深めた先輩 — <b>慶應義塾大学 総合政策学部</b></div>
+                <p>「高校で『コミュニティや居場所づくり』という問いを定めて学び、大学では憧れの研究会に。研究テーマが現実社会と接点を深く持ち出したと実感しています。今は空間づくりや認知科学など『人がどう感じるか』の視点から深掘りしています。」</p>
+            </div>
+        </section>
+
+        <!-- ヒト・生命・医療 -->
+        <section class="domain d3" id="d3">
+            <div class="domain-title"><span class="jp">ヒト・生命・医療</span><span class="en">People / Life</span></div>
+            <p class="domain-intro">人の心・体・育ちや、支えることに関心がある人へ。「人が健やかに生きる」を問う領域です。</p>
+            <div class="thread">
+                <div class="q">人はなぜ、そう感じ、行動するのか？</div>
+                <div class="chain">
+                    <div class="col field"><div class="lbl">学問分野</div><div class="val">心理学・人間科学・認知科学</div></div>
+                    <div class="col"><div class="lbl">学部の例</div><div class="val">心理学部／人間科学部</div></div>
+                    <div class="col job"><div class="lbl">仕事の例</div><div class="val">心理職・研究・人材・支援</div></div>
+                </div>
+            </div>
+            <div class="thread">
+                <div class="q">人が「健やかである」とは、何か？</div>
+                <div class="chain">
+                    <div class="col field"><div class="lbl">学問分野</div><div class="val">医学・看護・福祉・教育学</div></div>
+                    <div class="col"><div class="lbl">学部の例</div><div class="val">医学部／看護／福祉／教育学部</div></div>
+                    <div class="col job"><div class="lbl">仕事の例</div><div class="val">医療・看護・福祉職・教員・支援職</div></div>
+                </div>
+            </div>
+            <div class="voice">
+                <div class="vh">この領域で問いを深めた先輩 — <b>聖心女子大学 現代教養学部</b></div>
+                <p>「自分の過去を振り返り、やりたいことを整理していくうちに、音楽が好きなこと・国際情勢への関心・途上国の子供を支援したい思いが繋がりました。途上国で音楽教育を通した精神的支援をしたい、という目標を見つけられたのが、総合型選抜で得た一番のものです。」</p>
+            </div>
+        </section>
+
+        <!-- モノ・自然・法則 -->
+        <section class="domain d4" id="d4">
+            <div class="domain-title"><span class="jp">モノ・自然・法則</span><span class="en">Nature / Technology</span></div>
+            <p class="domain-intro">仕組み・モノづくり・自然の法則に惹かれる人へ。「世界はどう成り立っているか」を問う領域です。</p>
+            <div class="thread">
+                <div class="q">どう作れば、人の役に立つのか？</div>
+                <div class="chain">
+                    <div class="col field"><div class="lbl">学問分野</div><div class="val">工学・情報学・建築</div></div>
+                    <div class="col"><div class="lbl">学部の例</div><div class="val">工学部／情報学部／理工学部（建築）</div></div>
+                    <div class="col job"><div class="lbl">仕事の例</div><div class="val">エンジニア・技術開発・建築家</div></div>
+                </div>
+            </div>
+            <div class="thread">
+                <div class="q">この現象はなぜ起きるのか？／命や資源を、どう活かし守るか？</div>
+                <div class="chain">
+                    <div class="col field"><div class="lbl">学問分野</div><div class="val">理学・農学・環境学・水産学</div></div>
+                    <div class="col"><div class="lbl">学部の例</div><div class="val">理学部／農学部／環境学部</div></div>
+                    <div class="col job"><div class="lbl">仕事の例</div><div class="val">研究者・技術者・環境・生産</div></div>
+                </div>
+            </div>
+            <div class="voice">
+                <div class="vh">この領域で問いを深めた先輩 — <b>日本大学 理工学部 建築学科</b></div>
+                <p>「一年勉強して、ラグビーの経験とAOで得た経験がこんなにか！ってくらい生きてます。建築を丁寧に言語化する作業、失敗の上に良いものを作ること——今まで教わったことばかり。ギャラリーの作品は98点、一年生向けコンペも審査を通過しました。」</p>
+            </div>
+        </section>
+
+        <p class="note">※ この進路探究マップ 詳細版は PIVOT&QUEST が独自に作成したものです。学部・学科・職業の分類を断定・網羅するものではなく、大学・学部によって名称や範囲は異なります。ここに載っていない領域・学問・進路も数多くあり、実際には一人ひとりの問いから個別に描いていきます。先輩の声は、実際の受講生・卒業生のコメントを一部要約して掲載しています。</p>
+
+        <section class="cta">
+            <h2>あなたの問いは、どこへつながる？</h2>
+            <p>「どの領域か決められない」「問いが浮かばない」——そこからで大丈夫です。総合型選抜対策専門塾 Lighthouse で、あなたの経験を問いに変え、学問と進路へつなぎます。</p>
+            <a href="https://lp.p-quest.com/" target="_blank" rel="noopener noreferrer" class="btn">Lighthouse を見る<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16m0 0l-6-6m6 6l-6 6" /></svg></a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap footer-inner">
+            <div class="footer-brand">
+                <img src="./logo.png" alt="" class="footer-mark">
+                <p class="footer-copy">&copy; 2026 PIVOT & QUEST Inc.<br>All Rights Reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="./index.html">会社トップ</a>
+                <a href="./shinro-map.html">一覧版マップ</a>
+                <a href="./for-schools.html">学校の方へ</a>
+                <a href="./privacy-policy.html">プライバシーポリシー</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
