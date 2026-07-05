@@ -18,7 +18,7 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  <url><loc>https://p-quest.com/for-schools</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://p-quest.com/shinro-map</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://p-quest.com/shinro-map-detail</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://p-quest.com/for-schools.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://p-quest.com/shinro-map.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://p-quest.com/shinro-map-detail.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
