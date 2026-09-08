@@ -186,6 +186,14 @@ button { font: inherit; }
 .founder-role { margin-top: 2px; color: rgba(16,24,74,.62); font-size: 12px; font-weight: 700; }
 .founder-bio { margin-top: 18px; max-width: 540px; font-size: 13px; line-height: 2; font-weight: 500; }
 .founder-actions { margin-top: 25px; display: flex; flex-wrap: wrap; gap: 16px; }
+.company-details { position: relative; }
+.company-details summary { list-style: none; cursor: pointer; }
+.company-details summary::-webkit-details-marker { display: none; }
+.company-details dl { position: absolute; z-index: 5; top: calc(100% + 10px); right: 0; width: min(520px, 82vw); padding: 18px 22px; background: #fff; border: 1px solid var(--rule); box-shadow: var(--shadow); }
+.company-details dl div { display: grid; grid-template-columns: 86px 1fr; gap: 15px; padding: 8px 0; border-bottom: 1px solid rgba(16,24,74,.1); font-size: 12px; }
+.company-details dl div:last-child { border-bottom: 0; }
+.company-details dt { color: var(--purple); font-weight: 700; }
+.company-details dd { margin: 0; }
 
 /* entrances */
 .entrances { padding: 76px 0 70px; background: linear-gradient(176deg, #fff 0%, #fff 30%, var(--ivory) 30.2%); overflow: hidden; }
@@ -290,6 +298,8 @@ button { font: inherit; }
   .founder-photo img { width: 190px; }
   .founder-copy h2 { font-size: 28px; }
   .founder-actions .btn { flex: 1 1 100%; }
+  .company-details { width: 100%; }
+  .company-details dl { position: static; width: 100%; margin-top: 10px; }
   .entrances { padding-top: 58px; }
   .entrance { min-height: 76px; grid-template-columns: 1fr auto; gap: 4px 12px; padding: 12px 15px; }
   .entrance strong { font-size: 14px; }
